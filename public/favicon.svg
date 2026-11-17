@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F6E7B8" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#92702F" />
+    </linearGradient>
+    <linearGradient id="dark-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#28251F" />
+      <stop offset="100%" stop-color="#141310" />
+    </linearGradient>
+  </defs>
+  <!-- Background Shield/Octagon -->
+  <rect x="5" y="5" width="90" height="90" rx="22" fill="url(#dark-grad)" stroke="url(#gold-grad)" stroke-width="2.5" />
+  <rect x="11" y="11" width="78" height="78" rx="17" fill="none" stroke="url(#gold-grad)" stroke-width="0.75" stroke-opacity="0.6" />
+  
+  <!-- Stylized JS Monogram & Gold Ingot Facet -->
+  <path d="M50 19 L66 31 L66 69 L50 81 L34 69 L34 31 Z" fill="none" stroke="url(#gold-grad)" stroke-width="1.2" stroke-opacity="0.5" />
+  
+  <!-- Monogram Lettering -->
+  <text x="50" y="58" font-family="'Playfair Display', Georgia, serif" font-size="34" font-weight="700" fill="url(#gold-grad)" text-anchor="middle" letter-spacing="1">JS</text>
+  <circle cx="50" cy="27" r="2.5" fill="url(#gold-grad)" />
+  <circle cx="50" cy="73" r="1.8" fill="url(#gold-grad)" />
+</svg>

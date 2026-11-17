@@ -1,0 +1,250 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #F8F5ED;
+    --bg-secondary: #F1E9DA;
+    --color-white: #FFFFFF;
+    --gold-champagne: #E9D5A5;
+    --gold-metallic: #D4AF37;
+    --gold-antique: #B89548;
+    --gold-deep: #92702F;
+    --text-primary: #292722;
+    --text-secondary: #777168;
+    --bg-footer: #28251F;
+  }
+
+  html {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    border: none;
+    text-align: left;
+  }
+
+  h1, h2, h3, h4, .font-serif, .font-editorial {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .font-technical {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1E9DA;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B89548;
+}
+
+/* Metallic & Gold Gradient Utilities */
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #F6E7B8 0%, #D4AF37 50%, #B89548 100%);
+}
+
+.gold-gradient-dark-bg {
+  background: linear-gradient(135deg, #D4AF37 0%, #B89548 60%, #92702F 100%);
+}
+
+.gold-gradient-subtle {
+  background: linear-gradient(135deg, rgba(246, 231, 184, 0.4) 0%, rgba(212, 175, 55, 0.15) 50%, rgba(184, 149, 72, 0.25) 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #F6E7B8 0%, #D4AF37 40%, #B89548 80%, #92702F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-text-metallic {
+  background: linear-gradient(180deg, #FFFFFF 0%, #E9D5A5 45%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.champagne-gradient-bg {
+  background: linear-gradient(180deg, #F8F5ED 0%, #F1E9DA 100%);
+}
+
+/* Glossy Surface Elements */
+.glass-surface {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  box-shadow: 0 10px 30px -10px rgba(184, 149, 72, 0.12);
+}
+
+.glass-surface-dark {
+  background: rgba(40, 37, 31, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.35);
+}
+
+.glossy-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 8px 24px -6px rgba(146, 112, 47, 0.08);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.glossy-card:hover {
+  border-color: rgba(212, 175, 55, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px -8px rgba(146, 112, 47, 0.16);
+}
+
+.glossy-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: 0.6s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.glossy-card:hover::before {
+  left: 100%;
+}
+
+/* Glossy CTA Button */
+.btn-gold-glossy {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #F6E7B8 0%, #D4AF37 50%, #B89548 100%);
+  color: #28251F;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.85rem 1.85rem;
+  border-radius: 9999px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(246, 231, 184, 0.8);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-gold-glossy:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+  color: #141310;
+}
+
+.btn-gold-glossy::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: skewX(-25deg);
+  transition: 0.75s ease;
+}
+
+.btn-gold-glossy:hover::after {
+  left: 150%;
+}
+
+.btn-luxury-outline {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #292722;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.85rem 1.85rem;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(212, 175, 55, 0.5);
+  transition: all 0.3s ease;
+}
+
+.btn-luxury-outline:hover {
+  background: rgba(233, 213, 165, 0.2);
+  border-color: #D4AF37;
+  color: #28251F;
+  transform: translateY(-2px);
+}
+
+/* Luxury Decorative Elements */
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+}
+
+.gold-line-solid {
+  height: 1.5px;
+  background: #D4AF37;
+}
+
+.gold-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background: rgba(233, 213, 165, 0.28);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: #92702F;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Subtle Shimmer Animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.3) 50%, rgba(212, 175, 55, 0.1) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
