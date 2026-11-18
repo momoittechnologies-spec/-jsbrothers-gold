@@ -174,7 +174,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Verified Status & Copyright */}
-        <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-[#E9D5A5]/70">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#E9D5A5]/70">
           <div className="flex items-center gap-2 text-center md:text-left">
             <ShieldCheck className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
             <span>
@@ -182,8 +182,18 @@ export const Footer: React.FC = () => {
             </span>
           </div>
 
-          <p className="text-center md:text-right text-[11px]">
+          <p className="text-center md:text-right text-[11px] text-[#E9D5A5]/80">
             © {currentYear} JS BROTHER'S GOLD. All rights reserved.
+          </p>
+        </div>
+
+        {/* Dedicated "Powered by MOMO IT TECHNOLOGIES" Luxury Credit Strip */}
+        <div className="mt-6 pt-5 border-t border-white/10 flex items-center justify-center">
+          <p className="text-[11px] sm:text-xs tracking-[0.15em] uppercase flex items-center gap-2">
+            <span className="font-light text-[#E9D5A5]/60">Powered by</span>
+            <span className="font-bold tracking-[0.18em] bg-gradient-to-r from-[#F6E7B8] via-[#D4AF37] to-[#E9D5A5] bg-clip-text text-transparent hover:brightness-125 transition-all">
+              MOMO IT TECHNOLOGIES
+            </span>
           </p>
         </div>
       </div>
