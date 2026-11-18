@@ -12,6 +12,7 @@ interface SlideData {
   tag: string;
   headline: string;
   teluguSubheading: string;
+  teluguSubheadingShort?: string;
   description: string;
   primaryCtaText: string;
   primaryService: string;
@@ -25,7 +26,8 @@ const SLIDES: SlideData[] = [
     id: 1,
     tag: "Gold-Buying Services • Kadapa",
     headline: "Your Gold. Your Value. Your Choice.",
-    teluguSubheading: "మీ పాత మరియు వాడని బంగారానికి సరైన విలువ • తక్షణ నగదు చెల్లింపు",
+    teluguSubheading: "పాత బంగారానికి సరైన విలువ • తక్షణ నగదు చెల్లింపు",
+    teluguSubheadingShort: "పాత బంగారానికి సరైన విలువ • తక్షణ నగదు",
     description: "Discover a professional and transparent way to sell your old, unused and broken gold with JS BROTHER'S GOLD in Kadapa.",
     primaryCtaText: "SELL YOUR GOLD",
     primaryService: "Old Gold Buying",
@@ -37,7 +39,8 @@ const SLIDES: SlideData[] = [
     id: 2,
     tag: "Professional Gold Valuation",
     headline: "Every Gram Deserves Attention.",
-    teluguSubheading: "మీ సమక్షంలోనే పారదర్శక డిజిటల్ తూకం • ఖచ్చితమైన స్వచ్ఛత పరిశీలన",
+    teluguSubheading: "మీ సమక్షంలోనే డిజిటల్ తూకం • ఖచ్చితమైన స్వచ్ఛత పరిశీలన",
+    teluguSubheadingShort: "మీ సమక్షంలోనే డిజిటల్ తూకం • ఖచ్చితమైన స్వచ్ఛత",
     description: "Understand the true purity and value of your gold through our transparent in-person evaluation process.",
     primaryCtaText: "ENQUIRE NOW",
     primaryService: "Gold Valuation",
@@ -49,7 +52,8 @@ const SLIDES: SlideData[] = [
     id: 3,
     tag: "Pledged Gold Assistance",
     headline: "Your Gold Matters. We're Here to Help.",
-    teluguSubheading: "బ్యాంకులు & ఫైనాన్స్ వద్ద తనఖా పెట్టిన బంగారం విడిపించుటకు నమ్మకమైన సహాయం",
+    teluguSubheading: "బ్యాంకులు & ఫైనాన్స్ వద్ద తనఖా బంగారం విడిపించుటకు సహాయం",
+    teluguSubheadingShort: "తనఖా బంగారం విడిపించుటకు నమ్మకమైన సహాయం",
     description: "Speak with our Kadapa team for confidential guidance with releasing pledged gold from banks and private lenders.",
     primaryCtaText: "GET ASSISTANCE",
     primaryService: "Pledged Gold Assistance",
@@ -177,11 +181,12 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onOpenEnquiry }) => {
                 ))}
               </h1>
 
-              {/* Modern Professional Telugu Sub-Heading Badge */}
-              <div className="w-fit max-w-full inline-flex items-start sm:items-center gap-3 px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl bg-white/95 backdrop-blur-md border border-[#D4AF37]/45 shadow-sm shadow-[#D4AF37]/15 transition-all">
-                <span className="w-2 h-2 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#B89548] flex-shrink-0 mt-1.5 sm:mt-0 shadow-sm" />
-                <p className="font-telugu text-[13px] sm:text-sm md:text-[15px] font-bold text-[#292722] leading-relaxed tracking-normal">
-                  {currentSlide.teluguSubheading}
+              {/* Modern Professional Telugu Sub-Heading Badge - Clean Single Line on Mobile */}
+              <div className="w-fit max-w-full inline-flex items-center gap-2 sm:gap-2.5 px-3 sm:px-4 py-1.5 sm:py-2.5 rounded-full bg-white/95 backdrop-blur-md border border-[#D4AF37]/45 shadow-sm shadow-[#D4AF37]/15 transition-all">
+                <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#B89548] flex-shrink-0 shadow-sm" />
+                <p className="font-telugu text-[11px] min-[380px]:text-xs sm:text-sm md:text-[15px] font-bold text-[#292722] whitespace-nowrap tracking-normal leading-none">
+                  <span className="sm:hidden">{currentSlide.teluguSubheadingShort || currentSlide.teluguSubheading}</span>
+                  <span className="hidden sm:inline">{currentSlide.teluguSubheading}</span>
                 </p>
               </div>
 
