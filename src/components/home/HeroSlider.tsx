@@ -148,6 +148,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onOpenEnquiry }) => {
 
           {/* Lighter, Warm Ivory & Champagne Gradient Vignettes */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#F8F5ED]/95 via-[#F8F5ED]/80 to-transparent lg:w-3/4" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#F8F5ED]/95 via-[#F8F5ED]/80 to-transparent lg:hidden" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#F8F5ED] via-transparent to-[#F8F5ED]/40" />
           {/* Subtle Champagne Metallic Shimmer */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#D4AF37]/15 via-transparent to-transparent pointer-events-none" />
