@@ -53,6 +53,8 @@ The digital application is styled in **Glossy Ivory & Champagne Gold Luxury**, e
    - **Broken Gold Buying:** Fair valuation of broken, snapped, single, or scrap gold jewellery based strictly on elemental gold content.
    - **Professional Gold Valuation:** Non-destructive purity testing and transparent weight evaluation conducted directly in customer view.
    - **Pledged Gold Release Assistance:** Financial settlement and guidance to release gold pledged with banks, NBFCs, and pawnbrokers.
+   - **Gold Purity Testing:** Transparent, non-invasive karat testing to verify hallmarked or vintage alloy purity with zero physical or chemical damage.
+   - **Instant Cash Payment:** Immediate spot settlement in hand or instant direct bank credit (IMPS / UPI / RTGS) upon deal acceptance with itemized receipt.
 
 3. **Interactive Gold Weight & Karat Calculator (Phase 9):**
    - Indicative valuation calculator for 24K (99.9%), 22K (91.6% Hallmark), and 18K (75%).

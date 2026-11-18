@@ -25,6 +25,8 @@ export const Footer: React.FC = () => {
     { label: 'Broken Gold Buying', path: '/services#broken-gold-buying' },
     { label: 'Professional Gold Valuation', path: '/services#professional-gold-valuation' },
     { label: 'Pledged Gold Release Assistance', path: '/services#pledged-gold-release-assistance' },
+    { label: 'Gold Purity Testing', path: '/services#gold-purity-testing' },
+    { label: 'Instant Cash Payment', path: '/services#instant-cash-payment' },
   ];
 
   return (
@@ -191,9 +193,16 @@ export const Footer: React.FC = () => {
         <div className="mt-6 pt-5 border-t border-white/10 flex items-center justify-center">
           <p className="text-[11px] sm:text-xs tracking-[0.15em] uppercase flex items-center gap-2">
             <span className="font-light text-[#E9D5A5]/60">Powered by</span>
-            <span className="font-bold tracking-[0.18em] bg-gradient-to-r from-[#F6E7B8] via-[#D4AF37] to-[#E9D5A5] bg-clip-text text-transparent hover:brightness-125 transition-all">
-              MOMO IT TECHNOLOGIES
-            </span>
+            <a
+              href="https://www.momoittechnologies.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group/momo inline-flex items-center gap-1 font-bold tracking-[0.18em] bg-gradient-to-r from-[#F6E7B8] via-[#D4AF37] to-[#E9D5A5] bg-clip-text text-transparent hover:brightness-125 transition-all focus:outline-none"
+              title="MOMO IT TECHNOLOGIES - Web Design & Technology Solutions"
+            >
+              <span>MOMO IT TECHNOLOGIES</span>
+              <ExternalLink className="w-2.5 h-2.5 text-[#D4AF37] opacity-60 group-hover/momo:opacity-100 group-hover/momo:translate-x-0.5 transition-all" />
+            </a>
           </p>
         </div>
       </div>

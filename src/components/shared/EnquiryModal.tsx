@@ -272,6 +272,8 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                     <option value="Broken Gold Buying">Broken Gold Buying</option>
                     <option value="Gold Valuation">Gold Valuation</option>
                     <option value="Pledged Gold Assistance">Pledged Gold Assistance</option>
+                    <option value="Gold Purity Testing">Gold Purity Testing</option>
+                    <option value="Instant Cash Payment">Instant Cash Payment</option>
                     <option value="Other Enquiry">Other Enquiry</option>
                   </select>
                 </div>

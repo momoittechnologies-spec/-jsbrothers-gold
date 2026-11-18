@@ -110,6 +110,53 @@ export const SERVICES_DATA: ServiceItem[] = [
     ],
     processSummary: "Share your loan receipt or pledge slip. We calculate the pending redemption amount against the current market value of your gold. Once agreed, we assist in settling the lender and releasing your gold securely.",
     idealFor: "Borrowers facing gold auction deadlines, high interest dues, or wishing to exit a loan with net positive cash."
+  },
+  {
+    id: "gold-purity-testing",
+    slug: "gold-purity-testing",
+    title: "Gold Purity Testing",
+    subtitle: "Non-Destructive Karat & Purity Analysis",
+    tagline: "Transparent and precise gold purity verification conducted directly in your view.",
+    shortDescription: "Determine the exact karat and fineness of your gold ornaments with our transparent, non-destructive purity testing process in Kadapa.",
+    fullDescription: "Whether you want to verify the authenticity of hallmarked or non-hallmarked jewellery, heirlooms, or bullion, JS BROTHER'S GOLD provides honest, non-invasive purity testing. Our transparent methodology ensures your precious ornaments are never scratched, melted, or chemically damaged, giving you complete confidence in the real karat value of your gold.",
+    image: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1200&q=85",
+    benefits: [
+      "100% Non-destructive evaluation with zero scratches or damage",
+      "Accurate karat determination (24K, 22K, 18K, 14K & custom alloys)",
+      "Performed directly in your presence for total transparency",
+      "Itemized purity explanation with zero obligation to sell"
+    ],
+    acceptedItems: [
+      "Hallmarked 916 and non-hallmarked vintage jewellery",
+      "Traditional temple jewellery and antique heirlooms",
+      "Gold coins, bullion bars, and commemorative medallions",
+      "White gold, yellow gold, and rose gold ornaments"
+    ],
+    processSummary: "We inspect and test your ornaments in your presence using precision evaluation equipment, explaining every karat detail and purity percentage openly.",
+    idealFor: "Anyone wishing to verify the true purity of their gold before selling, exchanging, or valuing family assets."
+  },
+  {
+    id: "instant-cash-payment",
+    slug: "instant-cash-payment",
+    title: "Instant Cash Payment",
+    subtitle: "Immediate Spot Settlement in Hand or Bank Transfer",
+    tagline: "Fair spot valuation paid out instantaneously upon deal agreement.",
+    shortDescription: "Receive immediate payment in hand or direct to your bank account via instant IMPS transfer with zero waiting time and zero deductions.",
+    fullDescription: "We respect your time and financial needs. Once your gold is weighed, tested, and valued to your satisfaction, JS BROTHER'S GOLD settles your payment on the spot. Choose between immediate cash in hand (in full compliance with statutory limits) or instant IMPS/NEFT bank transfer directly credited to your account before you leave our Kadapa showroom.",
+    image: "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1200&q=85",
+    benefits: [
+      "Instant on-the-spot payment settlement within minutes",
+      "Choice of immediate cash payout (as per regulatory guidelines)",
+      "Direct instant bank credit via IMPS / UPI / RTGS",
+      "Transparent receipt with clear weight, purity, and rate calculations"
+    ],
+    acceptedItems: [
+      "All gold items sold at our Kadapa showroom",
+      "Old, broken, single, and pledged gold liquidations",
+      "Gold coins, legacy bars, and scrap jewellery payouts"
+    ],
+    processSummary: "Upon accepting our transparent valuation quotation, your preferred payment method is processed immediately with an official acknowledgement receipt.",
+    idealFor: "Customers needing urgent liquidity, emergency funds, or a fast, reliable, and secure gold selling transaction."
   }
 ];
 

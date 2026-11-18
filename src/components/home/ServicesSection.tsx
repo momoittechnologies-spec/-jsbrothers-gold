@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, CheckCircle, Scale, Shield, Landmark } from 'lucide-react';
+import { ArrowRight, Sparkles, CheckCircle, Scale, Shield, Landmark, Award, Banknote } from 'lucide-react';
 import { SERVICES_DATA } from '../../data/servicesData';
 
 interface ServicesSectionProps {
@@ -12,7 +12,9 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenEnquiry 
     'old-gold-buying': <Sparkles className="w-5 h-5" />,
     'broken-gold-buying': <Scale className="w-5 h-5" />,
     'professional-gold-valuation': <Shield className="w-5 h-5" />,
-    'pledged-gold-release': <Landmark className="w-5 h-5" />
+    'pledged-gold-release': <Landmark className="w-5 h-5" />,
+    'gold-purity-testing': <Award className="w-5 h-5" />,
+    'instant-cash-payment': <Banknote className="w-5 h-5" />
   };
 
   return (
@@ -37,8 +39,8 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenEnquiry 
           </p>
         </div>
 
-        {/* 4 Premium Service Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+        {/* 6 Premium Service Cards Grid (3 Columns on Desktop) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SERVICES_DATA.map((service, index) => (
             <div
               key={service.id}
