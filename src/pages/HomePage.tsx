@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { updatePageSEO } from '../utils/seo';
 import { HeroSlider } from '../components/home/HeroSlider';
 import { LuxuryMarquee } from '../components/home/LuxuryMarquee';
 import { TrustIndicators } from '../components/home/TrustIndicators';
@@ -17,7 +18,12 @@ interface HomePageProps {
 
 export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
   useEffect(() => {
-    document.title = "JS BROTHER'S GOLD | Premier Gold Buyers & Valuation in Kadapa";
+    updatePageSEO({
+      title: "JS BROTHER'S GOLD | Premier Gold Buyers & Valuation in Kadapa",
+      description: "Kadapa's #1 trusted gold buyers. Sell old, unused & broken gold at live market rates. 100% in-person digital scale evaluation & instant cash/IMPS payment at Y Junction, Kadapa.",
+      keywords: "Gold buyers in Kadapa, sell gold Kadapa, old gold buyers Kadapa, gold valuation Kadapa, cash for gold Kadapa, pledged gold release Kadapa, Y Junction Kadapa gold shop",
+      canonicalPath: "/"
+    });
   }, []);
 
   return (

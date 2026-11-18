@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { updatePageSEO } from '../utils/seo';
 import { PageHeader } from '../components/shared/PageHeader';
 import { SERVICES_DATA } from '../data/servicesData';
 import { CheckCircle2, ArrowRight, MessageSquare, Phone } from 'lucide-react';
@@ -12,7 +13,12 @@ interface ServicesPageProps {
 
 export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenEnquiry }) => {
   useEffect(() => {
-    document.title = "Our Services | JS BROTHER'S GOLD Kadapa";
+    updatePageSEO({
+      title: "Gold Buying & Valuation Services in Kadapa | JS BROTHER'S GOLD",
+      description: "Explore our gold services in Kadapa: Old Gold Buying, Broken Gold Valuation, Pledged Gold Loan Release, Precision Purity Testing & Instant Cash Settlements.",
+      keywords: "Gold services Kadapa, old gold buying Kadapa, broken gold buyers Kadapa, pledged gold release Kadapa, gold purity test Kadapa, instant cash for gold Kadapa",
+      canonicalPath: "/services"
+    });
   }, []);
 
   return (

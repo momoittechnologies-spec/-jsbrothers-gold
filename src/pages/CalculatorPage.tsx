@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { updatePageSEO } from '../utils/seo';
 import { PageHeader } from '../components/shared/PageHeader';
 import { Calculator, ShieldCheck, Info, MessageSquare, PhoneCall, ArrowRight } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/businessInfo';
@@ -15,7 +16,12 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenEnquiry })
   const [stoneWeight, setStoneWeight] = useState<string>('0');
 
   useEffect(() => {
-    document.title = "Gold Weight & Karat Calculator | JS BROTHER'S GOLD Kadapa";
+    updatePageSEO({
+      title: "Live Gold Price & Weight Calculator Kadapa | JS BROTHER'S GOLD",
+      description: "Calculate the estimated value of your 24K, 22K, and 18K gold instantly based on live Kadapa market rates with our free transparent gold valuation calculator.",
+      keywords: "Gold calculator Kadapa, 22k gold rate in Kadapa today, gold price calculator Andhra Pradesh, sell gold value calculator Kadapa",
+      canonicalPath: "/valuation-calculator"
+    });
   }, []);
 
   const gross = parseFloat(grossWeight) || 0;

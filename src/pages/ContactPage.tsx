@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { updatePageSEO } from '../utils/seo';
 import { PageHeader } from '../components/shared/PageHeader';
 import { MapPin, Phone, Clock, Send, MessageSquare, CheckCircle2, ShieldCheck, Navigation } from 'lucide-react';
 import { InstagramIcon } from '../components/shared/Icons';
@@ -15,7 +16,12 @@ export const ContactPage: React.FC = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    document.title = "Contact Us & Store Location | JS BROTHER'S GOLD Kadapa";
+    updatePageSEO({
+      title: "Contact & Kadapa Showroom Location | JS BROTHER'S GOLD",
+      description: "Visit JS BROTHER'S GOLD at Y Junction, New Bus Stand Road, Opp. Zudio Showroom, Kadapa. Call +91 79953 25224 or chat on WhatsApp for transparent private gold valuation.",
+      keywords: "JS Brothers Gold address Kadapa, gold buyers near me Kadapa, Y Junction Kadapa gold shop, JS Brothers phone number Kadapa",
+      canonicalPath: "/contact"
+    });
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {

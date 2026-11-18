@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { updatePageSEO } from '../utils/seo';
 import { PageHeader } from '../components/shared/PageHeader';
 import { Star, ExternalLink, ShieldCheck, CheckCircle2, MessageSquare } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/businessInfo';
@@ -7,7 +8,12 @@ import { getWhatsAppUrl } from '../utils/whatsapp';
 
 export const ReviewsPage: React.FC = () => {
   useEffect(() => {
-    document.title = "Google Reviews & Testimonials | JS BROTHER'S GOLD Kadapa";
+    updatePageSEO({
+      title: "Customer Reviews & 5.0 Star Ratings | JS BROTHER'S GOLD Kadapa",
+      description: "Read verified customer reviews and 5.0-star Google ratings for JS BROTHER'S GOLD Kadapa. Rated #1 for transparent weighing, fair value, and respectful service.",
+      keywords: "JS Brothers Gold reviews, gold buyer reviews Kadapa, best rated gold buyer Kadapa, customer ratings JS Brothers Gold",
+      canonicalPath: "/reviews"
+    });
   }, []);
 
   return (

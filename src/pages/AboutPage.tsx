@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { updatePageSEO } from '../utils/seo';
 import { PageHeader } from '../components/shared/PageHeader';
 import { ShieldCheck, Eye, Scale, Check, ArrowRight } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/businessInfo';
@@ -10,7 +11,12 @@ interface AboutPageProps {
 
 export const AboutPage: React.FC<AboutPageProps> = ({ onOpenEnquiry }) => {
   useEffect(() => {
-    document.title = "About Us | JS BROTHER'S GOLD Kadapa";
+    updatePageSEO({
+      title: "About Us | JS BROTHER'S GOLD Kadapa — Heritage & Transparency",
+      description: "Discover the story and ethos of JS BROTHER'S GOLD in Kadapa. Located at Y Junction, opposite Zudio, offering honest valuation and dignified service without hidden deductions.",
+      keywords: "About JS Brothers Gold Kadapa, trusted gold buyers Kadapa, gold buyers Y Junction, honest gold valuation Kadapa",
+      canonicalPath: "/about"
+    });
   }, []);
 
   return (

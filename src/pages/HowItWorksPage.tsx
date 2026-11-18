@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { updatePageSEO } from '../utils/seo';
 import { PageHeader } from '../components/shared/PageHeader';
 import { HOW_IT_WORKS_STEPS } from '../data/servicesData';
 import { ShieldCheck, FileText, CheckCircle, HelpCircle, ArrowRight, PhoneCall } from 'lucide-react';
@@ -11,7 +12,12 @@ interface HowItWorksPageProps {
 
 export const HowItWorksPage: React.FC<HowItWorksPageProps> = ({ onOpenEnquiry }) => {
   useEffect(() => {
-    document.title = "How It Works | JS BROTHER'S GOLD Kadapa";
+    updatePageSEO({
+      title: "How It Works | 4-Step Gold Valuation Process in Kadapa",
+      description: "Learn how to sell gold transparently in Kadapa. Our simple 4-step process guarantees live digital weighing, zero hidden deductions, and immediate payment in Kadapa.",
+      keywords: "How to sell gold in Kadapa, gold valuation process Kadapa, safe gold selling Andhra Pradesh, instant gold settlement Kadapa",
+      canonicalPath: "/how-it-works"
+    });
   }, []);
 
   const faqs = [
