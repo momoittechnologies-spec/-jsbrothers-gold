@@ -7,6 +7,7 @@ import { ServicesSection } from '../components/home/ServicesSection';
 import { WhyChooseUs } from '../components/home/WhyChooseUs';
 import { HowItWorks } from '../components/home/HowItWorks';
 import { GoogleReviews } from '../components/home/GoogleReviews';
+import { ShowroomGallery } from '../components/home/ShowroomGallery';
 import { ContactCTA } from '../components/home/ContactCTA';
 import { LocationContact } from '../components/home/LocationContact';
 
@@ -44,6 +45,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
 
       {/* Phase 6 Section 06: Google Customer Reviews */}
       <GoogleReviews />
+
+      {/* Phase 6 Section 07: Real Establishment & Showroom Photographic Gallery */}
+      <ShowroomGallery />
 
       {/* Dark Velvet Gold Infinite Marquee Transition */}
       <LuxuryMarquee variant="dark" speed="slow" />
