@@ -60,12 +60,12 @@ export const ReviewsPage: React.FC = () => {
 
           <div className="pt-2 flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href={BUSINESS_INFO.googleMapsUrl}
+              href={BUSINESS_INFO.googleReviewUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold-glossy text-xs uppercase tracking-wider font-bold py-3.5 px-8 shadow-md flex items-center justify-center gap-2"
             >
-              <span>READ GOOGLE REVIEWS</span>
+              <span>READ & WRITE GOOGLE REVIEWS</span>
               <ExternalLink className="w-4 h-4" />
             </a>
 
@@ -121,6 +121,28 @@ export const ReviewsPage: React.FC = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Rate Us on Google Banner */}
+          <div className="mt-12 rounded-2xl bg-[#FAF7F0] border border-[#D4AF37]/35 p-6 sm:p-8 text-center space-y-4 shadow-sm">
+            <div className="inline-flex text-[#D4AF37] text-lg">★★★★★</div>
+            <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#292722]">
+              Had a Great Experience at JS BROTHER'S GOLD?
+            </h4>
+            <p className="text-xs sm:text-sm text-[#777168] max-w-lg mx-auto leading-relaxed">
+              Your feedback helps fellow Kadapa residents discover a dignified, transparent, and fair gold valuation experience. Leave your 5-star Google review today!
+            </p>
+            <div className="pt-2">
+              <a
+                href={BUSINESS_INFO.googleReviewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold-glossy text-xs uppercase tracking-wider font-bold py-3.5 px-8 shadow-md inline-flex items-center gap-2"
+              >
+                <span>LEAVE A GOOGLE REVIEW</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
           </div>
         </div>
 

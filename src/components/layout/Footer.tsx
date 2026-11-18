@@ -71,12 +71,18 @@ export const Footer: React.FC = () => {
             </div>
 
             {/* Google Rating Badge */}
-            <div className="inline-flex items-center gap-3 p-2.5 rounded-xl bg-[#1e1c17] border border-[#D4AF37]/25">
+            <a
+              href={BUSINESS_INFO.googleReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 p-2.5 rounded-xl bg-[#1e1c17] border border-[#D4AF37]/25 hover:border-[#D4AF37]/60 transition-all group cursor-pointer"
+              title="Read Google Reviews for JS BROTHER'S GOLD"
+            >
               <div className="flex text-[#D4AF37] text-xs">★★★★★</div>
-              <div className="text-xs text-[#E9D5A5]/90">
-                <strong className="text-white">5.0 / 5.0</strong> based on 55 Google Reviews
+              <div className="text-xs text-[#E9D5A5]/90 group-hover:text-white transition-colors">
+                <strong className="text-white">5.0 / 5.0</strong> based on 55 Google Reviews ↗
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Group 2: Quick Navigation (2 cols on desktop) */}

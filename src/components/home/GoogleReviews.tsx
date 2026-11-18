@@ -70,10 +70,10 @@ export const GoogleReviews: React.FC = () => {
           {/* READ GOOGLE REVIEWS Button */}
           <div className="pt-2">
             <a
-              href={BUSINESS_INFO.googleMapsUrl}
+              href={BUSINESS_INFO.googleReviewUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-gold-glossy text-xs uppercase tracking-wider font-bold py-3 px-8 shadow-md"
+              className="btn-gold-glossy text-xs uppercase tracking-wider font-bold py-3 px-8 shadow-md inline-flex items-center"
             >
               <span>READ GOOGLE REVIEWS</span>
               <ExternalLink className="w-4 h-4 ml-2" />
