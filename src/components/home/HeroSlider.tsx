@@ -116,7 +116,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onOpenEnquiry }) => {
 
   return (
     <section 
-      className="relative w-full h-[76vh] min-h-[560px] max-h-[820px] overflow-hidden bg-[#F8F5ED]"
+      className="relative w-full overflow-hidden bg-[#F8F5ED]"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
@@ -124,63 +124,93 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onOpenEnquiry }) => {
       onTouchEnd={handleTouchEnd}
       aria-label="JS Brother's Gold Hero Showcase"
     >
-      {/* Background Image Carousel with Lighter, Radiant Ivory/Champagne Treatment */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentSlide.id}
-          initial={{ opacity: 0, scale: 1.04 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="absolute inset-0 w-full h-full"
-        >
-          <picture className="w-full h-full block">
-            {currentSlide.mobileImage && (
-              <source media="(max-width: 768px)" srcSet={currentSlide.mobileImage} />
-            )}
-            <img
-              src={currentSlide.image}
-              alt={currentSlide.imageAlt}
-              className="w-full h-full object-cover object-right sm:object-center filter brightness-[0.94] contrast-[1.02]"
-              loading="eager"
-            />
-          </picture>
-
-          {/* Background Gradients: Desktop left safe zone fade, Mobile top-down gentle readability fade */}
-          <div className="absolute inset-0 hidden sm:block sm:w-3/4 bg-gradient-to-r from-[#F8F5ED]/95 via-[#F8F5ED]/80 to-transparent" />
-          <div className="absolute inset-0 sm:hidden bg-gradient-to-b from-[#F8F5ED]/90 via-[#F8F5ED]/55 to-transparent pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#F8F5ED]/80 via-transparent to-[#F8F5ED]/20 pointer-events-none" />
-          {/* Subtle Champagne Metallic Shimmer */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#D4AF37]/15 via-transparent to-transparent pointer-events-none" />
-        </motion.div>
-      </AnimatePresence>
-
-      {/* Hero Content Overlay */}
-      <div className="relative z-10 max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
-        <div className="max-w-2xl lg:max-w-3xl space-y-5 pt-4">
+      {/* ======================================================== */}
+      {/* MOBILE & TABLET LUXURY SHOWCASE (Up to 1023px)          */}
+      {/* Pure Photographic Stage + Crystal-Clear Editorial Card */}
+      {/* ======================================================== */}
+      <div className="lg:hidden flex flex-col w-full bg-[#F8F5ED]">
+        {/* 1. Visual Stage: 100% Unobscured Photograph */}
+        <div className="relative w-full aspect-[16/10] min-h-[220px] max-h-[320px] overflow-hidden bg-[#1E1B18] shadow-sm border-b border-[#D4AF37]/30">
           <AnimatePresence mode="wait">
             <motion.div
-              key={`content-${currentSlide.id}`}
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -12 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              className="space-y-4"
+              key={`mob-img-${currentSlide.id}`}
+              initial={{ opacity: 0, scale: 1.04 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.45, ease: "easeOut" }}
+              className="absolute inset-0 w-full h-full"
             >
-              {/* Gold Luxury Tag */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFFFF]/90 backdrop-blur-md border border-[#D4AF37]/40 shadow-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" aria-hidden="true" />
-                <span className="text-xs uppercase tracking-[0.16em] font-bold text-[#92702F]">
-                  {currentSlide.tag}
-                </span>
-              </div>
+              <img
+                src={currentSlide.mobileImage || currentSlide.image}
+                alt={currentSlide.imageAlt}
+                className="w-full h-full object-cover object-center filter brightness-[1.0] contrast-[1.02]"
+                loading="eager"
+              />
+              {/* Subtle top/bottom edge gradient for luxury depth */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/25 pointer-events-none" />
+            </motion.div>
+          </AnimatePresence>
 
+          {/* Floating Category Tag on Image */}
+          <div className="absolute top-3 left-3 z-10 pointer-events-none">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-[#D4AF37]/50 shadow-md">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" aria-hidden="true" />
+              <span className="text-[10px] uppercase tracking-[0.14em] font-bold text-[#F3E7C4]">
+                {currentSlide.tag}
+              </span>
+            </div>
+          </div>
+
+          {/* Nav Chevrons on Mobile Image */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-2.5 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black/40 backdrop-blur-md text-white/90 hover:text-white border border-white/10 active:scale-95 transition-all shadow-md"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-2.5 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black/40 backdrop-blur-md text-white/90 hover:text-white border border-white/10 active:scale-95 transition-all shadow-md"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="w-4 h-4" />
+          </button>
+
+          {/* Slide Indicator Dots on Image */}
+          <div className="absolute bottom-3 right-3 z-10 flex items-center gap-1.5 bg-black/55 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/15">
+            {SLIDES.map((slide, idx) => (
+              <button
+                key={slide.id}
+                onClick={() => setCurrentIndex(idx)}
+                className={`transition-all duration-300 rounded-full ${
+                  currentIndex === idx 
+                    ? 'w-4 h-1.5 bg-[#D4AF37]' 
+                    : 'w-1.5 h-1.5 bg-white/45'
+                }`}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* 2. Editorial Stage: 100% High-Contrast, Crystal-Clear Content */}
+        <div className="px-4.5 pt-4 pb-4 space-y-3.5 bg-[#F8F5ED]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`mob-content-${currentSlide.id}`}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className="space-y-3"
+            >
               {/* Headline */}
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#292722] leading-[1.14]">
+              <h1 className="font-serif text-2xl min-[380px]:text-[26px] font-bold tracking-tight text-[#1E1B18] leading-[1.2]">
                 {currentSlide.headline.split('.').map((part, index, arr) => (
-                  <span key={index} className="inline-block mr-2 last:mr-0">
+                  <span key={index} className="inline-block mr-1.5 last:mr-0">
                     {index === 1 ? (
-                      <span className="bg-gradient-to-r from-[#D4AF37] via-[#B89548] to-[#92702F] bg-clip-text text-transparent">
+                      <span className="bg-gradient-to-r from-[#B8860B] via-[#92702F] to-[#7B5818] bg-clip-text text-transparent">
                         {part.trim()}
                         {index < arr.length - 1 ? '.' : ''}
                       </span>
@@ -191,90 +221,203 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onOpenEnquiry }) => {
                 ))}
               </h1>
 
-              {/* Modern Professional Telugu Sub-Heading Badge - Clean Single Line on Mobile */}
-              <div className="w-fit max-w-full inline-flex items-center gap-2 sm:gap-2.5 px-3 sm:px-4 py-1.5 sm:py-2.5 rounded-full bg-white/95 backdrop-blur-md border border-[#D4AF37]/45 shadow-sm shadow-[#D4AF37]/15 transition-all">
-                <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#B89548] flex-shrink-0 shadow-sm" />
-                <p className="font-telugu text-[11px] min-[380px]:text-xs sm:text-sm md:text-[15px] font-bold text-[#292722] whitespace-nowrap tracking-normal leading-none">
-                  <span className="sm:hidden">{currentSlide.teluguSubheadingShort || currentSlide.teluguSubheading}</span>
-                  <span className="hidden sm:inline">{currentSlide.teluguSubheading}</span>
+              {/* Single-line Telugu Subheading Badge */}
+              <div className="w-fit max-w-full inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#D4AF37]/50 shadow-sm shadow-[#D4AF37]/10">
+                <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#B89548] flex-shrink-0" />
+                <p className="font-telugu text-[12px] min-[380px]:text-[13px] font-bold text-[#1E1B18] whitespace-nowrap tracking-normal leading-none">
+                  {currentSlide.teluguSubheadingShort || currentSlide.teluguSubheading}
                 </p>
               </div>
 
-              {/* Description */}
-              <p className="text-sm sm:text-base lg:text-lg text-[#777168] font-medium leading-relaxed max-w-xl">
+              {/* Description - Rich Dark Charcoal (100% WCAG AAA Readability) */}
+              <p className="text-[13px] min-[380px]:text-[14px] text-[#3D3830] font-medium leading-relaxed">
                 {currentSlide.description}
               </p>
+
+              {/* Action Buttons: 50/50 Balanced Width */}
+              <div className="pt-1 flex items-center gap-2.5">
+                <button
+                  onClick={() => onOpenEnquiry(currentSlide.primaryService)}
+                  className="flex-1 btn-gold-glossy text-xs uppercase tracking-wider font-bold py-3.5 px-3 shadow-md shadow-[#D4AF37]/25 flex items-center justify-center gap-1.5"
+                >
+                  <span>{currentSlide.primaryCtaText}</span>
+                  <ArrowRight className="w-3.5 h-3.5 flex-shrink-0" />
+                </button>
+
+                <a
+                  href={getTelUrl()}
+                  className="flex-1 text-center text-xs uppercase tracking-wider font-bold py-3.5 px-3 rounded-xl border border-[#D4AF37]/70 bg-white text-[#1E1B18] shadow-sm hover:bg-[#F3E7C4]/30 flex items-center justify-center gap-1.5 transition-colors"
+                >
+                  <Phone className="w-3.5 h-3.5 text-[#92702F] flex-shrink-0" />
+                  <span>{currentSlide.secondaryCtaText}</span>
+                </a>
+              </div>
+
+              {/* Verified Trust Strip */}
+              <div className="pt-2 flex items-center justify-between text-[11px] font-semibold text-[#5C5549] border-t border-[#D4AF37]/25 pt-2.5">
+                <div className="flex items-center gap-1 text-[#1E1B18]">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#D4AF37] flex-shrink-0" />
+                  <span>Transparent Valuation</span>
+                </div>
+                <span>•</span>
+                <span>Precision Scale</span>
+                <span>•</span>
+                <span className="text-[#92702F]">Opp. Zudio, Kadapa</span>
+              </div>
             </motion.div>
           </AnimatePresence>
-
-          {/* Action Buttons */}
-          <div className="pt-2 flex flex-wrap items-center gap-3.5">
-            <button
-              onClick={() => onOpenEnquiry(currentSlide.primaryService)}
-              className="btn-gold-glossy text-xs sm:text-sm uppercase tracking-wider font-bold py-3.5 px-7 shadow-lg shadow-[#D4AF37]/25"
-            >
-              <span>{currentSlide.primaryCtaText}</span>
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </button>
-
-            <a
-              href={getTelUrl()}
-              className="btn-luxury-outline text-xs sm:text-sm uppercase tracking-wider font-semibold py-3.5 px-6 !border-[#D4AF37]/70 !text-[#292722] bg-[#FFFFFF]/80 hover:!bg-[#E9D5A5]/30 shadow-sm"
-            >
-              <Phone className="w-4 h-4 mr-2 text-[#92702F]" />
-              <span>{currentSlide.secondaryCtaText}</span>
-            </a>
-          </div>
-
-          {/* Trust Highlights Strip (Safe & Verified Wording) */}
-          <div className="pt-2 flex flex-wrap items-center gap-2 sm:gap-3 text-xs text-[#777168]">
-            <div className="flex items-center gap-1.5 font-semibold text-[#292722]">
-              <ShieldCheck className="w-4 h-4 text-[#D4AF37]" />
-              <span>Transparent Evaluation</span>
-            </div>
-            <span>•</span>
-            <span className="font-semibold text-[#292722]">Precision Scale Weighing</span>
-            <span>•</span>
-            <span className="text-[#92702F] font-semibold">Opp. Zudio, Kadapa</span>
-          </div>
         </div>
       </div>
 
-      {/* Manual Controls (Prev / Next Buttons) */}
-      <div className="hidden sm:flex absolute right-8 bottom-10 z-20 items-center gap-2.5">
-        <button
-          onClick={prevSlide}
-          className="p-3 rounded-full bg-[#FFFFFF]/80 backdrop-blur-md border border-[#D4AF37]/40 text-[#292722] hover:text-[#92702F] hover:bg-white transition-all active:scale-95 shadow-md"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="w-5 h-5" />
-        </button>
-
-        <button
-          onClick={nextSlide}
-          className="p-3 rounded-full bg-[#FFFFFF]/80 backdrop-blur-md border border-[#D4AF37]/40 text-[#292722] hover:text-[#92702F] hover:bg-white transition-all active:scale-95 shadow-md"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="w-5 h-5" />
-        </button>
-      </div>
-
-      {/* Slide Indicators / Progress Bars */}
-      <div className="absolute bottom-6 sm:bottom-7 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5">
-        {SLIDES.map((slide, idx) => (
-          <button
-            key={slide.id}
-            onClick={() => setCurrentIndex(idx)}
-            className="group relative py-2 focus:outline-none"
-            aria-label={`Go to slide ${idx + 1}`}
+      {/* ======================================================== */}
+      {/* DESKTOP LUXURY HERO SHOWCASE (1024px and wider)         */}
+      {/* 16:9 Full-Bleed Panorama + Left Text Safe Zone           */}
+      {/* ======================================================== */}
+      <div className="hidden lg:block relative w-full h-[76vh] min-h-[580px] max-h-[820px] overflow-hidden bg-[#F8F5ED]">
+        {/* Background Image Carousel with Radiant Ivory/Champagne Treatment */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide.id}
+            initial={{ opacity: 0, scale: 1.04 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="absolute inset-0 w-full h-full"
           >
-            <div className={`h-1.5 rounded-full transition-all duration-300 ${
-              currentIndex === idx 
-                ? 'w-10 bg-gradient-to-r from-[#F6E7B8] via-[#D4AF37] to-[#B89548] shadow-md shadow-[#D4AF37]/40' 
-                : 'w-3 bg-[#292722]/20 group-hover:bg-[#292722]/40'
-            }`} />
+            <img
+              src={currentSlide.image}
+              alt={currentSlide.imageAlt}
+              className="w-full h-full object-cover object-center filter brightness-[0.95] contrast-[1.02]"
+              loading="eager"
+            />
+
+            {/* Left-Side Architectural Champagne Vignette (Preserves Negative Space for Text) */}
+            <div className="absolute inset-0 w-3/4 bg-gradient-to-r from-[#F8F5ED]/95 via-[#F8F5ED]/80 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#F8F5ED]/70 via-transparent to-[#F8F5ED]/20" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#D4AF37]/15 via-transparent to-transparent pointer-events-none" />
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Hero Content Overlay (Desktop) */}
+        <div className="relative z-10 max-w-7xl mx-auto h-full px-8 flex flex-col justify-center">
+          <div className="max-w-2xl lg:max-w-3xl space-y-5 pt-4">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`desktop-content-${currentSlide.id}`}
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="space-y-4"
+              >
+                {/* Gold Luxury Tag */}
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFFFF]/90 backdrop-blur-md border border-[#D4AF37]/40 shadow-sm">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" aria-hidden="true" />
+                  <span className="text-xs uppercase tracking-[0.16em] font-bold text-[#92702F]">
+                    {currentSlide.tag}
+                  </span>
+                </div>
+
+                {/* Headline */}
+                <h1 className="font-serif text-5xl lg:text-6xl font-bold tracking-tight text-[#292722] leading-[1.14]">
+                  {currentSlide.headline.split('.').map((part, index, arr) => (
+                    <span key={index} className="inline-block mr-2 last:mr-0">
+                      {index === 1 ? (
+                        <span className="bg-gradient-to-r from-[#D4AF37] via-[#B89548] to-[#92702F] bg-clip-text text-transparent">
+                          {part.trim()}
+                          {index < arr.length - 1 ? '.' : ''}
+                        </span>
+                      ) : (
+                        <span>{part.trim()}{index < arr.length - 1 ? '.' : ''}</span>
+                      )}
+                    </span>
+                  ))}
+                </h1>
+
+                {/* Modern Professional Telugu Sub-Heading Badge */}
+                <div className="w-fit max-w-full inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white/95 backdrop-blur-md border border-[#D4AF37]/45 shadow-sm shadow-[#D4AF37]/15 transition-all">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#B89548] flex-shrink-0 shadow-sm" />
+                  <p className="font-telugu text-sm md:text-[15px] font-bold text-[#292722] whitespace-nowrap tracking-normal leading-none">
+                    {currentSlide.teluguSubheading}
+                  </p>
+                </div>
+
+                {/* Description - Rich Darker Charcoal for Crisp Desktop Contrast */}
+                <p className="text-base lg:text-lg text-[#3D3830] font-medium leading-relaxed max-w-xl">
+                  {currentSlide.description}
+                </p>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Action Buttons */}
+            <div className="pt-2 flex flex-wrap items-center gap-3.5">
+              <button
+                onClick={() => onOpenEnquiry(currentSlide.primaryService)}
+                className="btn-gold-glossy text-sm uppercase tracking-wider font-bold py-3.5 px-7 shadow-lg shadow-[#D4AF37]/25"
+              >
+                <span>{currentSlide.primaryCtaText}</span>
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </button>
+
+              <a
+                href={getTelUrl()}
+                className="btn-luxury-outline text-sm uppercase tracking-wider font-semibold py-3.5 px-6 !border-[#D4AF37]/70 !text-[#292722] bg-[#FFFFFF]/90 hover:!bg-[#E9D5A5]/30 shadow-sm"
+              >
+                <Phone className="w-4 h-4 mr-2 text-[#92702F]" />
+                <span>{currentSlide.secondaryCtaText}</span>
+              </a>
+            </div>
+
+            {/* Trust Highlights Strip */}
+            <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-[#5C5549]">
+              <div className="flex items-center gap-1.5 font-semibold text-[#292722]">
+                <ShieldCheck className="w-4 h-4 text-[#D4AF37]" />
+                <span>Transparent Evaluation</span>
+              </div>
+              <span>•</span>
+              <span className="font-semibold text-[#292722]">Precision Scale Weighing</span>
+              <span>•</span>
+              <span className="text-[#92702F] font-semibold">Opp. Zudio, Kadapa</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Manual Controls (Prev / Next Buttons) */}
+        <div className="flex absolute right-8 bottom-10 z-20 items-center gap-2.5">
+          <button
+            onClick={prevSlide}
+            className="p-3 rounded-full bg-[#FFFFFF]/85 backdrop-blur-md border border-[#D4AF37]/40 text-[#292722] hover:text-[#92702F] hover:bg-white transition-all active:scale-95 shadow-md"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="w-5 h-5" />
           </button>
-        ))}
+
+          <button
+            onClick={nextSlide}
+            className="p-3 rounded-full bg-[#FFFFFF]/85 backdrop-blur-md border border-[#D4AF37]/40 text-[#292722] hover:text-[#92702F] hover:bg-white transition-all active:scale-95 shadow-md"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Desktop Slide Indicators / Progress Bars */}
+        <div className="absolute bottom-7 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5">
+          {SLIDES.map((slide, idx) => (
+            <button
+              key={slide.id}
+              onClick={() => setCurrentIndex(idx)}
+              className="group relative py-2 focus:outline-none"
+              aria-label={`Go to slide ${idx + 1}`}
+            >
+              <div className={`h-1.5 rounded-full transition-all duration-300 ${
+                currentIndex === idx 
+                  ? 'w-10 bg-gradient-to-r from-[#F6E7B8] via-[#D4AF37] to-[#B89548] shadow-md shadow-[#D4AF37]/40' 
+                  : 'w-3 bg-[#292722]/20 group-hover:bg-[#292722]/40'
+              }`} />
+            </button>
+          ))}
+        </div>
       </div>
     </section>
   );
