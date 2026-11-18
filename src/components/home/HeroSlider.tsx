@@ -141,15 +141,15 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onOpenEnquiry }) => {
             <img
               src={currentSlide.image}
               alt={currentSlide.imageAlt}
-              className="w-full h-full object-cover object-center filter brightness-[0.92] contrast-[1.02]"
+              className="w-full h-full object-cover object-right sm:object-center filter brightness-[0.94] contrast-[1.02]"
               loading="eager"
             />
           </picture>
 
-          {/* Lighter, Warm Ivory & Champagne Gradient Vignettes */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#F8F5ED]/95 via-[#F8F5ED]/80 to-transparent lg:w-3/4" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#F8F5ED]/95 via-[#F8F5ED]/80 to-transparent lg:hidden" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#F8F5ED] via-transparent to-[#F8F5ED]/40" />
+          {/* Background Gradients: Desktop left safe zone fade, Mobile top-down gentle readability fade */}
+          <div className="absolute inset-0 hidden sm:block sm:w-3/4 bg-gradient-to-r from-[#F8F5ED]/95 via-[#F8F5ED]/80 to-transparent" />
+          <div className="absolute inset-0 sm:hidden bg-gradient-to-b from-[#F8F5ED]/90 via-[#F8F5ED]/55 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#F8F5ED]/80 via-transparent to-[#F8F5ED]/20 pointer-events-none" />
           {/* Subtle Champagne Metallic Shimmer */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#D4AF37]/15 via-transparent to-transparent pointer-events-none" />
         </motion.div>
