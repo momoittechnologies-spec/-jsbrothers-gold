@@ -36,14 +36,14 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenEnquiry }) => 
             </p>
 
             <p className="text-sm sm:text-base text-[#777168] leading-relaxed">
-              We understand that selling gold is a deeply personal and significant financial decision. That is why our Kadapa showroom is engineered around complete transparency. There are no behind-the-counter secrets, arbitrary deductions, or confusing formulas. Using advanced electronic Karatmeters, we test your gold in your presence, explain every gram and purity percentage, and honour today's fair market value.
+              We understand that selling gold is an important financial decision. That is why our Kadapa showroom is centered on transparency. There are no behind-the-counter mysteries or confusing deductions. We examine your gold directly in your presence on precision digital scales, explain every gram and purity detail clearly, and honour fair market value with complete transparency.
             </p>
 
             {/* Trust Highlights Checklist */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
               {[
                 "100% In-Person Visual Evaluation",
-                "Non-Destructive Testing Methods",
+                "Precision Digital Scale Weighing",
                 "Instant Bank Transfer / Cash Settlement",
                 "Pledged Gold Loan Assistance in Kadapa",
               ].map((item, idx) => (
@@ -68,7 +68,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenEnquiry }) => 
 
               <Link
                 to="/about"
-                className="btn-luxury-outline text-xs uppercase tracking-wider font-semibold py-3.5 px-6"
+                className="btn-luxury-outline text-xs uppercase tracking-wider font-semibold py-3.5 px-6 !bg-white"
               >
                 Learn Our Story
               </Link>
@@ -78,18 +78,18 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenEnquiry }) => 
           {/* Right Column: Luxury Gold Photography Composition (6 cols) */}
           <div className="lg:col-span-6 relative">
             {/* Ambient Gold Halo */}
-            <div className="absolute -inset-4 bg-gradient-to-tr from-[#D4AF37]/20 via-[#E9D5A5]/10 to-transparent rounded-3xl blur-2xl -z-10" />
+            <div className="absolute -inset-4 bg-gradient-to-tr from-[#D4AF37]/15 via-[#E9D5A5]/10 to-transparent rounded-3xl blur-2xl -z-10" />
 
-            <div className="relative rounded-2xl overflow-hidden border border-[#D4AF37]/40 shadow-2xl shadow-[#92702F]/15 group">
+            <div className="relative rounded-2xl overflow-hidden border border-[#D4AF37]/40 shadow-xl group">
               <img
                 src="https://images.unsplash.com/photo-1620656798579-1984d9e87dfa?auto=format&fit=crop&w=1400&q=85"
-                alt="Artisanal gold craftsmanship and jewellery evaluation in Kadapa"
-                className="w-full h-[420px] sm:h-[500px] object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                alt="Gold jewellery appraisal and evaluation in Kadapa"
+                className="w-full h-[400px] sm:h-[480px] object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                 loading="lazy"
               />
 
               {/* Glass Float Card on Image */}
-              <div className="absolute bottom-6 left-6 right-6 p-4 sm:p-5 glass-surface rounded-xl border border-[#D4AF37]/40 shadow-xl backdrop-blur-md">
+              <div className="absolute bottom-6 left-6 right-6 p-4 sm:p-5 glass-surface bg-white/95 rounded-xl border border-[#D4AF37]/40 shadow-lg backdrop-blur-md">
                 <div className="flex items-center justify-between">
                   <div className="space-y-0.5">
                     <span className="text-[10px] font-bold uppercase tracking-widest text-[#92702F]">

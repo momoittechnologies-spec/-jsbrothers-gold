@@ -191,7 +191,7 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({ onOpenEnquiry })
                 <span>Our Transparent Valuation Guarantee</span>
               </div>
               <p className="text-[#777168] leading-relaxed">
-                In strict adherence to ethical gold-buying standards, JS BROTHER'S GOLD never provides speculative or misleading online pricing. Gold rates fluctuate continuously in international and domestic markets. Our final valuation is calculated live at our Kadapa showroom based on exact Karatmeter spectrometry and that hour's transparent rate.
+                In strict adherence to ethical gold-buying standards, JS BROTHER'S GOLD never provides speculative or misleading online pricing. Gold rates fluctuate continuously in international and domestic markets. Our final valuation is calculated live at our Kadapa showroom based on in-person evaluation, precision digital scale weighing, and that hour's prevailing rate.
               </p>
             </div>
 

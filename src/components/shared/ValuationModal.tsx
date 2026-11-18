@@ -177,7 +177,7 @@ export const ValuationModal: React.FC<ValuationModalProps> = ({
             <div className="p-3.5 rounded-xl bg-[#F8F5ED] border border-[#D4AF37]/20 text-xs text-[#777168] flex items-start gap-2">
               <ShieldCheck className="w-4 h-4 text-[#D4AF37] flex-shrink-0 mt-0.5" />
               <p className="leading-relaxed">
-                <strong className="text-[#292722]">Transparent Valuation Policy:</strong> We do not speculate or display unverified online rates. Final valuation is determined live in Kadapa using German optical Karatmeters and Class-II calibrated scales.
+                <strong className="text-[#292722]">Transparent Valuation Policy:</strong> We do not speculate or display unverified online rates. Final valuation is determined live at our Kadapa showroom based on in-person evaluation, precision digital scale weighing, and prevailing market rates.
               </p>
             </div>
 

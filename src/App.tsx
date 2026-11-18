@@ -62,7 +62,7 @@ export function App() {
         <Header onOpenEnquiry={handleOpenEnquiry} />
 
         {/* Main Content Pages with Suspense */}
-        <main className="flex-1 pb-16 lg:pb-0">
+        <main className="flex-1 pb-20 lg:pb-0">
           <Suspense fallback={<LuxuryLoader />}>
             <Routes>
               <Route path="/" element={<HomePage onOpenEnquiry={handleOpenEnquiry} />} />

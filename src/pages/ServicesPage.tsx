@@ -20,7 +20,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenEnquiry }) => 
       <PageHeader
         badge="Our Comprehensive Services"
         title="Discover Our Gold Services"
-        subtitle="Transparent evaluation, scientific non-destructive testing, and immediate financial settlements in Kadapa."
+        subtitle="Transparent evaluation, precision digital scale weighing, and immediate financial settlements in Kadapa."
         backgroundImage="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1920&q=85"
       />
 

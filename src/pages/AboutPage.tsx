@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { PageHeader } from '../components/shared/PageHeader';
-import { ShieldCheck, Award, Eye, Scale, Users, Sparkles, Check, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Eye, Scale, Check, ArrowRight } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/businessInfo';
 import { Link } from 'react-router-dom';
 
@@ -18,7 +18,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenEnquiry }) => {
       <PageHeader
         badge="Our Heritage & Ethos"
         title="Where Gold Meets Trust"
-        subtitle="Kadapa's foremost destination for transparent gold evaluation, non-destructive karat testing, and dignified service."
+        subtitle="Kadapa's foremost destination for transparent gold evaluation, precision scale weighing, and dignified service."
         backgroundImage="https://images.unsplash.com/photo-1620656798579-1984d9e87dfa?auto=format&fit=crop&w=1920&q=85"
       />
 
@@ -35,11 +35,11 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenEnquiry }) => {
             <div className="w-16 h-1 bg-gradient-to-r from-[#F6E7B8] via-[#D4AF37] to-[#B89548] rounded-full" />
 
             <p className="text-base text-[#292722] leading-relaxed font-medium">
-              JS BROTHER'S GOLD was established in Kadapa with a single defining vision: to transform gold-selling from an uncertain, behind-closed-doors negotiation into an open, dignified, and scientifically verified experience.
+              JS BROTHER'S GOLD was established in Kadapa with a clear focus: to make the gold-buying experience straightforward, professional and customer-friendly.
             </p>
 
             <p className="text-sm text-[#777168] leading-relaxed">
-              Traditional pawnbrokers and unorganized jewelers often employ crude rubstone testing, arbitrary melting discounts, and opaque deductions. At JS BROTHER'S GOLD, we dismantled those practices. Every piece of gold—whether a family heirloom, a broken ornament, or a pledged bank receipt—is evaluated in full view of the owner using calibrated technology.
+              We understand that selling gold is an important financial decision. That is why our Kadapa showroom is engineered around complete transparency. There are no behind-the-counter secrets or arbitrary deductions. Every piece of gold—whether a family heirloom, an unused ornament, or a pledged bank receipt—is evaluated directly in your presence using digital precision scales.
             </p>
 
             <div className="p-5 rounded-2xl bg-[#F1E9DA]/60 border border-[#D4AF37]/30 space-y-3">
@@ -49,29 +49,29 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenEnquiry }) => {
               <ul className="space-y-2 text-xs sm:text-sm text-[#292722]">
                 <li className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
-                  <span>No hidden deductions or melting losses</span>
+                  <span>100% In-Person Visual Evaluation</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
-                  <span>German laser Karatmeter testing in your presence</span>
+                  <span>Precision digital scale weighing directly in your view</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
-                  <span>Instant settlement via IMPS bank transfer or cash</span>
+                  <span>Instant settlement via IMPS bank transfer or cash as per law</span>
                 </li>
               </ul>
             </div>
           </div>
 
           <div className="lg:col-span-6">
-            <div className="relative rounded-2xl overflow-hidden border border-[#D4AF37]/40 shadow-2xl">
+            <div className="relative rounded-2xl overflow-hidden border border-[#D4AF37]/40 shadow-xl">
               <img
                 src="https://images.unsplash.com/photo-1588444650733-d0767b753fc8?auto=format&fit=crop&w=1200&q=85"
                 alt="Jeweller inspecting gold ornaments with professional loupe and precision"
                 className="w-full h-[450px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#28251F]/70 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 p-4 glass-surface rounded-xl text-center">
+              <div className="absolute bottom-6 left-6 right-6 p-4 glass-surface bg-white/95 rounded-xl text-center">
                 <span className="font-serif text-base font-bold text-[#292722]">
                   {BUSINESS_INFO.address.landmark}, Kadapa
                 </span>
@@ -85,51 +85,51 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* 3 Pillars of Scientific Valuation */}
+      {/* 3 Pillars of Transparent Valuation */}
       <section className="py-20 bg-[#F1E9DA]/40 border-y border-[#D4AF37]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span className="gold-badge">Non-Destructive Testing</span>
+            <span className="gold-badge">Transparent Valuation Approach</span>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#292722]">
-              The 3 Pillars of Our Scientific Process
+              The 3 Pillars of Our Evaluation Process
             </h2>
             <div className="w-16 h-1 bg-gradient-to-r from-[#F6E7B8] via-[#D4AF37] to-[#B89548] rounded-full mx-auto" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass-surface p-8 rounded-2xl border border-[#D4AF37]/30 space-y-4">
+            <div className="bg-white p-8 rounded-2xl border border-[#D4AF37]/30 shadow-sm space-y-4">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#F8F5ED] to-[#F1E9DA] border border-[#D4AF37]/40 flex items-center justify-center text-[#92702F]">
                 <Eye className="w-6 h-6" />
               </div>
               <h3 className="font-serif text-xl font-bold text-[#292722]">
-                1. Optical Karatmeter
+                1. Visual Examination
               </h3>
               <p className="text-xs sm:text-sm text-[#777168] leading-relaxed">
-                We employ advanced X-ray Fluorescence (XRF) spectrometry. Your jewellery is never cut, filed, or damaged with nitric acid. The exact percentage of gold and alloy metals is measured down to 0.01% accuracy.
+                We inspect your gold ornaments directly in your view. Hallmark stamps, design details, and physical condition are assessed openly, explaining the evaluation criteria clearly.
               </p>
             </div>
 
-            <div className="glass-surface p-8 rounded-2xl border border-[#D4AF37]/30 space-y-4">
+            <div className="bg-white p-8 rounded-2xl border border-[#D4AF37]/30 shadow-sm space-y-4">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#F8F5ED] to-[#F1E9DA] border border-[#D4AF37]/40 flex items-center justify-center text-[#92702F]">
                 <Scale className="w-6 h-6" />
               </div>
               <h3 className="font-serif text-xl font-bold text-[#292722]">
-                2. Calibrated Scales
+                2. Digital Scale Weighing
               </h3>
               <p className="text-xs sm:text-sm text-[#777168] leading-relaxed">
-                Class-II digital precision scales with legal metrology stamps ensure true weight representation. You see the reading yourself, with separate itemized accounting for embedded stones and net gold weight.
+                Accurate digital scales provide transparent weight measurements right in front of you. Embedded stone and bead weights are accounted for fairly to calculate net gold mass.
               </p>
             </div>
 
-            <div className="glass-surface p-8 rounded-2xl border border-[#D4AF37]/30 space-y-4">
+            <div className="bg-white p-8 rounded-2xl border border-[#D4AF37]/30 shadow-sm space-y-4">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#F8F5ED] to-[#F1E9DA] border border-[#D4AF37]/40 flex items-center justify-center text-[#92702F]">
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <h3 className="font-serif text-xl font-bold text-[#292722]">
-                3. Direct Market Rates
+                3. Fair Bullion Rates
               </h3>
               <p className="text-xs sm:text-sm text-[#777168] leading-relaxed">
-                Valuations match prevailing bullion indices. You receive an itemized quotation sheet and are under zero obligation to proceed until you are 100% comfortable with the terms.
+                Valuations reflect prevailing market rates for 24K, 22K, and 18K purity. You receive a clear, itemized explanation with zero obligation to proceed.
               </p>
             </div>
           </div>
@@ -142,7 +142,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenEnquiry }) => {
           Experience Transparent Gold Valuation in Kadapa
         </h3>
         <p className="text-sm sm:text-base text-[#777168] max-w-xl mx-auto">
-          Visit our showroom at Y Junction, New Bus Stand Road, opposite Zudio Showroom, or book an appointment.
+          Visit our showroom at Y Junction, New Bus Stand Road, opposite Zudio Showroom, or book a consultation.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <button
@@ -154,7 +154,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenEnquiry }) => {
           </button>
           <Link
             to="/contact"
-            className="btn-luxury-outline text-xs uppercase tracking-wider font-semibold py-3.5 px-6"
+            className="btn-luxury-outline text-xs uppercase tracking-wider font-semibold py-3.5 px-6 !bg-white"
           >
             Find Our Location
           </Link>

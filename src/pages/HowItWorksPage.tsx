@@ -17,7 +17,7 @@ export const HowItWorksPage: React.FC<HowItWorksPageProps> = ({ onOpenEnquiry })
   const faqs = [
     {
       q: "Does your valuation process damage or scratch my jewellery?",
-      a: "Never. We use modern optical X-ray Fluorescence (XRF) Karatmeters that analyze the elemental composition without taking physical shavings, scratching the metal, or applying corrosive nitric acids."
+      a: "Our evaluation is conducted with extreme care directly in your presence. We inspect hallmarking, purity, and weight transparently without damaging or altering your ornaments."
     },
     {
       q: "What documents do I need to bring?",
@@ -38,7 +38,7 @@ export const HowItWorksPage: React.FC<HowItWorksPageProps> = ({ onOpenEnquiry })
       <PageHeader
         badge="Transparent Procedure"
         title="A Simple Way to Get Started"
-        subtitle="Step-by-step clarity on our evaluation, non-destructive testing, and immediate settlement workflow in Kadapa."
+        subtitle="Step-by-step clarity on our transparent evaluation, precision weighing, and immediate settlement workflow in Kadapa."
         backgroundImage="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=1920&q=85"
       />
 

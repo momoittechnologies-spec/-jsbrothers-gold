@@ -124,6 +124,7 @@ export const ContactPage: React.FC = () => {
                   <div className="uppercase font-semibold text-[#292722]">Business Timings</div>
                   <p className="font-semibold text-[#292722] mt-0.5">{BUSINESS_INFO.openingHours.weekdays}</p>
                   <p className="text-[#777168]">{BUSINESS_INFO.openingHours.sunday}</p>
+                  <p className="text-[11px] text-[#777168] italic mt-0.5">({BUSINESS_INFO.openingHours.note})</p>
                 </div>
               </div>
             </div>

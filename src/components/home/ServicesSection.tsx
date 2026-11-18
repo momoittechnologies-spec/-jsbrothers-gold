@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, CheckCircle, Scale, Shield, Landmark } from 'lucide-react';
-import { SERVICES_DATA, ServiceItem } from '../../data/servicesData';
+import { SERVICES_DATA } from '../../data/servicesData';
 
 interface ServicesSectionProps {
   onOpenEnquiry: (service: string) => void;
@@ -16,7 +16,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenEnquiry 
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-[#F8F5ED] relative">
+    <section className="py-20 lg:py-28 bg-[#FFFFFF] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -33,7 +33,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenEnquiry 
           <div className="w-16 h-1 bg-gradient-to-r from-[#F6E7B8] via-[#D4AF37] to-[#B89548] rounded-full mx-auto" />
 
           <p className="text-sm sm:text-base text-[#777168] leading-relaxed">
-            Professional gold solutions tailored to your financial needs with transparent Karatmeter verification and direct payout in Kadapa.
+            Professional gold solutions tailored to your requirements with transparent in-person evaluation and direct payout in Kadapa.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenEnquiry 
           {SERVICES_DATA.map((service, index) => (
             <div
               key={service.id}
-              className="glossy-card rounded-2xl flex flex-col justify-between group border border-[#D4AF37]/30"
+              className="glossy-card rounded-2xl flex flex-col justify-between group border border-[#D4AF37]/30 bg-[#FAF7F0]"
             >
               <div>
                 {/* Image Showcase */}
@@ -50,7 +50,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenEnquiry 
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out"
+                    className="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700 ease-out"
                     loading="lazy"
                   />
                   
@@ -58,7 +58,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenEnquiry 
                   <div className="absolute inset-0 bg-gradient-to-t from-[#28251F]/80 via-[#28251F]/20 to-transparent" />
 
                   {/* Top Badge */}
-                  <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#28251F]/80 backdrop-blur-md border border-[#D4AF37]/40 text-[#E9D5A5] text-[11px] font-semibold tracking-wider">
+                  <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#28251F]/85 backdrop-blur-md border border-[#D4AF37]/40 text-[#E9D5A5] text-[11px] font-semibold tracking-wider">
                     <span className="text-[#D4AF37]">{serviceIcons[service.id]}</span>
                     <span>0{index + 1}</span>
                   </div>
@@ -83,7 +83,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenEnquiry 
                   {/* Key Benefits Bullets */}
                   <div className="space-y-2 pt-1 border-t border-[#D4AF37]/15">
                     {service.benefits.slice(0, 2).map((benefit, bIdx) => (
-                      <div key={bIdx} className="flex items-start gap-2 text-xs font-medium text-[#292722]">
+                      <div key={bIdx} className="flex items-start gap-2 text-xs font-semibold text-[#292722]">
                         <CheckCircle className="w-3.5 h-3.5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
                         <span>{benefit}</span>
                       </div>

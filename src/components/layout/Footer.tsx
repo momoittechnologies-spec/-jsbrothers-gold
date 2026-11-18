@@ -28,29 +28,30 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-[#28251F] text-[#F8F5ED] border-t border-[#D4AF37]/30 pt-16 pb-12 relative overflow-hidden">
-      {/* Decorative Gold Glow in Background */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-[#D4AF37]/5 blur-3xl pointer-events-none" />
+    <footer className="bg-[#28251F] text-[#F8F5ED] border-t border-[#D4AF37]/30 pt-14 pb-24 lg:pb-12 relative overflow-hidden">
+      {/* Decorative Gold Ambient Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-28 bg-[#D4AF37]/5 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-[#D4AF37]/20">
-          {/* Brand Column (5 cols) */}
-          <div className="lg:col-span-5 space-y-5">
+        {/* Main Footer: Columns on Desktop, 4 Well-Spaced Structured Groups on Mobile */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-[#D4AF37]/20">
+          
+          {/* Group 1: Business Identity & Overview (5 cols on desktop) */}
+          <div className="lg:col-span-5 space-y-4">
             <GoldLogo variant="dark" size="lg" />
 
-            <p className="text-sm text-[#E9D5A5]/80 leading-relaxed max-w-md pt-2">
-              JS BROTHER'S GOLD is Kadapa's distinguished destination for transparent gold buying, scientific karat valuation, and pledged gold release assistance. Delivering trust, non-destructive testing, and immediate value in Andhra Pradesh.
+            <p className="text-xs sm:text-sm text-[#E9D5A5]/80 leading-relaxed max-w-md pt-1">
+              JS BROTHER'S GOLD is Kadapa's trusted destination for transparent gold buying, professional purity valuation, and pledged gold release assistance. Delivering dignified, customer-focused service in Andhra Pradesh.
             </p>
 
-            <div className="flex items-center gap-3 pt-2">
+            <div className="flex flex-wrap items-center gap-3 pt-1">
               <a
                 href={BUSINESS_INFO.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#1e1c17] border border-[#D4AF37]/30 text-xs font-semibold text-[#E9D5A5] hover:text-white hover:border-[#D4AF37] transition-all group"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#1e1c17] border border-[#D4AF37]/30 text-xs font-semibold text-[#E9D5A5] hover:text-white hover:border-[#D4AF37] transition-all group"
               >
-                <InstagramIcon className="w-4 h-4 text-[#D4AF37] group-hover:scale-110 transition-transform" />
+                <InstagramIcon className="w-3.5 h-3.5 text-[#D4AF37] group-hover:scale-110 transition-transform" />
                 <span>Follow {BUSINESS_INFO.instagramHandle}</span>
                 <ExternalLink className="w-3 h-3 opacity-60" />
               </a>
@@ -59,7 +60,7 @@ export const Footer: React.FC = () => {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-950/40 border border-emerald-500/40 text-xs font-semibold text-emerald-300 hover:border-emerald-400 transition-all"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-950/40 border border-emerald-500/40 text-xs font-semibold text-emerald-300 hover:border-emerald-400 transition-all"
               >
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
                 <span>WhatsApp Desk</span>
@@ -67,27 +68,27 @@ export const Footer: React.FC = () => {
             </div>
 
             {/* Google Rating Badge */}
-            <div className="inline-flex items-center gap-3 p-3 rounded-xl bg-[#1e1c17] border border-[#D4AF37]/20">
-              <div className="flex text-[#D4AF37] text-sm">★★★★★</div>
+            <div className="inline-flex items-center gap-3 p-2.5 rounded-xl bg-[#1e1c17] border border-[#D4AF37]/25">
+              <div className="flex text-[#D4AF37] text-xs">★★★★★</div>
               <div className="text-xs text-[#E9D5A5]/90">
                 <strong className="text-white">5.0 / 5.0</strong> based on 55 Google Reviews
               </div>
             </div>
           </div>
 
-          {/* Quick Links (2 cols) */}
-          <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-serif text-base font-bold text-[#E9D5A5] tracking-wider uppercase">
-              Explore
+          {/* Group 2: Quick Navigation (2 cols on desktop) */}
+          <div className="lg:col-span-2 space-y-3 pt-4 lg:pt-0 border-t border-[#D4AF37]/15 lg:border-t-0">
+            <h4 className="font-serif text-sm sm:text-base font-bold text-[#E9D5A5] tracking-wider uppercase">
+              Quick Navigation
             </h4>
-            <ul className="space-y-2.5 text-xs tracking-wide">
+            <ul className="space-y-2 text-xs tracking-wide">
               {quickLinks.map((item) => (
                 <li key={item.path}>
                   <Link
                     to={item.path}
-                    className="text-[#F8F5ED]/75 hover:text-[#D4AF37] transition-colors flex items-center gap-1.5"
+                    className="text-[#F8F5ED]/75 hover:text-[#D4AF37] transition-colors flex items-center gap-1.5 py-0.5"
                   >
-                    <span className="w-1 h-1 rounded-full bg-[#D4AF37]/40" />
+                    <span className="w-1 h-1 rounded-full bg-[#D4AF37]/50" />
                     {item.label}
                   </Link>
                 </li>
@@ -95,19 +96,19 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Services (2 cols) */}
-          <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-serif text-base font-bold text-[#E9D5A5] tracking-wider uppercase">
-              Services
+          {/* Group 3: Services (2 cols on desktop) */}
+          <div className="lg:col-span-2 space-y-3 pt-4 lg:pt-0 border-t border-[#D4AF37]/15 lg:border-t-0">
+            <h4 className="font-serif text-sm sm:text-base font-bold text-[#E9D5A5] tracking-wider uppercase">
+              Our Services
             </h4>
-            <ul className="space-y-2.5 text-xs tracking-wide">
+            <ul className="space-y-2 text-xs tracking-wide">
               {serviceLinks.map((item) => (
                 <li key={item.label}>
                   <Link
                     to={item.path}
-                    className="text-[#F8F5ED]/75 hover:text-[#D4AF37] transition-colors flex items-center gap-1.5"
+                    className="text-[#F8F5ED]/75 hover:text-[#D4AF37] transition-colors flex items-center gap-1.5 py-0.5"
                   >
-                    <span className="w-1 h-1 rounded-full bg-[#D4AF37]/40" />
+                    <span className="w-1 h-1 rounded-full bg-[#D4AF37]/50" />
                     {item.label}
                   </Link>
                 </li>
@@ -115,39 +116,48 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Kadapa Location & Timings (3 cols) */}
-          <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-serif text-base font-bold text-[#E9D5A5] tracking-wider uppercase">
+          {/* Group 4: Kadapa Establishment & Contact Details (3 cols on desktop) */}
+          <div className="lg:col-span-3 space-y-3 pt-4 lg:pt-0 border-t border-[#D4AF37]/15 lg:border-t-0">
+            <h4 className="font-serif text-sm sm:text-base font-bold text-[#E9D5A5] tracking-wider uppercase">
               Kadapa Establishment
             </h4>
             
-            <div className="space-y-3 text-xs text-[#F8F5ED]/80">
-              <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+            <div className="space-y-2.5 text-xs text-[#F8F5ED]/80">
+              {/* Clickable Address Link */}
+              <a
+                href={BUSINESS_INFO.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-2.5 hover:text-[#D4AF37] transition-colors group"
+              >
+                <MapPin className="w-4 h-4 text-[#D4AF37] flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                 <p className="leading-relaxed">
                   {BUSINESS_INFO.address.full}
                 </p>
-              </div>
+              </a>
 
+              {/* Clickable Phone Link */}
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
                 <a
                   href={getTelUrl()}
-                  className="hover:text-[#D4AF37] transition-colors font-semibold"
+                  className="hover:text-[#D4AF37] transition-colors font-bold text-[#FFFFFF]"
                 >
                   {BUSINESS_INFO.phoneFormatted}
                 </a>
               </div>
 
+              {/* Opening Hours & Confirmation Note */}
               <div className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-[#D4AF37] flex-shrink-0 mt-0.5" />
                 <div>
                   <p>{BUSINESS_INFO.openingHours.weekdays}</p>
                   <p className="text-[#E9D5A5]/70">{BUSINESS_INFO.openingHours.sunday}</p>
+                  <p className="text-[10px] text-[#E9D5A5]/50 italic mt-0.5">({BUSINESS_INFO.openingHours.note})</p>
                 </div>
               </div>
 
-              <div className="pt-2">
+              <div className="pt-1">
                 <a
                   href={BUSINESS_INFO.googleMapsUrl}
                   target="_blank"
@@ -160,18 +170,19 @@ export const Footer: React.FC = () => {
               </div>
             </div>
           </div>
+
         </div>
 
-        {/* Bottom Disclaimer & Copyright */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#E9D5A5]/60">
-          <div className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-[#D4AF37]" />
+        {/* Bottom Verified Status & Copyright */}
+        <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-[#E9D5A5]/70">
+          <div className="flex items-center gap-2 text-center md:text-left">
+            <ShieldCheck className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
             <span>
-              Certified Karatmeter Valuation • Licensed Gold Buying • Kadapa, Andhra Pradesh
+              Professional Gold Valuation • Transparent Evaluation Process • Kadapa, Andhra Pradesh
             </span>
           </div>
 
-          <p className="text-center md:text-right">
+          <p className="text-center md:text-right text-[11px]">
             © {currentYear} JS BROTHER'S GOLD. All rights reserved.
           </p>
         </div>

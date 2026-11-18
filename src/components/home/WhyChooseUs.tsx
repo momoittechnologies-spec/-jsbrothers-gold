@@ -11,7 +11,7 @@ export const WhyChooseUs: React.FC = () => {
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-[#F1E9DA]/40 relative">
+    <section className="py-20 lg:py-28 bg-[#F1E9DA]/50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -28,7 +28,7 @@ export const WhyChooseUs: React.FC = () => {
           <div className="w-16 h-1 bg-gradient-to-r from-[#F6E7B8] via-[#D4AF37] to-[#B89548] rounded-full mx-auto" />
 
           <p className="text-sm sm:text-base text-[#777168] leading-relaxed">
-            Experience gold valuation designed around client clarity, scientific precision, and respectful service in Kadapa.
+            Experience gold valuation designed around client clarity, transparent weighing, and respectful service in Kadapa.
           </p>
         </div>
 
@@ -37,9 +37,9 @@ export const WhyChooseUs: React.FC = () => {
           {TRUST_FEATURES.map((feature, idx) => (
             <div
               key={feature.id}
-              className="glass-surface p-7 rounded-2xl border border-[#D4AF37]/30 hover:border-[#D4AF37]/60 transition-all duration-300 hover:-translate-y-1 group"
+              className="bg-white p-7 rounded-2xl border border-[#D4AF37]/30 hover:border-[#D4AF37]/60 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#F8F5ED] to-[#F1E9DA] border border-[#D4AF37]/40 flex items-center justify-center text-[#92702F] mb-5 shadow-sm group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#F8F5ED] to-[#F1E9DA] border border-[#D4AF37]/40 flex items-center justify-center text-[#92702F] mb-5 shadow-sm group-hover:scale-108 transition-transform">
                 {featureIcons[feature.id]}
               </div>
 
