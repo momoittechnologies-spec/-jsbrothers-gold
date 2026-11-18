@@ -177,10 +177,10 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onOpenEnquiry }) => {
                 ))}
               </h1>
 
-              {/* Professional Telugu Sub-Heading */}
-              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-xl bg-[#FFFFFF]/90 backdrop-blur-sm border border-[#D4AF37]/35 shadow-sm max-w-full">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] flex-shrink-0 animate-pulse" />
-                <p className="text-xs sm:text-sm font-semibold text-[#292722] leading-snug tracking-wide">
+              {/* Modern Professional Telugu Sub-Heading Badge */}
+              <div className="w-fit max-w-full inline-flex items-start sm:items-center gap-3 px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl bg-white/95 backdrop-blur-md border border-[#D4AF37]/45 shadow-sm shadow-[#D4AF37]/15 transition-all">
+                <span className="w-2 h-2 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#B89548] flex-shrink-0 mt-1.5 sm:mt-0 shadow-sm" />
+                <p className="font-telugu text-[13px] sm:text-sm md:text-[15px] font-bold text-[#292722] leading-relaxed tracking-normal">
                   {currentSlide.teluguSubheading}
                 </p>
               </div>

@@ -53,6 +53,10 @@
   .font-technical {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   }
+
+  .font-telugu {
+    font-family: 'Anek Telugu', 'Noto Sans Telugu', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
 }
 
 /* Custom Scrollbar */
