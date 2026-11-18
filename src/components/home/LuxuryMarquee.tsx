@@ -76,7 +76,7 @@ export const LuxuryMarquee: React.FC<LuxuryMarqueeProps> = ({
   return (
     <aside 
       aria-label="Brand highlights ticker"
-      className={`relative w-full overflow-hidden select-none py-3.5 sm:py-4 transition-colors ${
+      className={`relative w-full overflow-hidden select-none py-5 sm:py-6 transition-colors shadow-sm ${
         isDark 
           ? 'bg-[#23201a] border-y border-[#D4AF37]/35 text-[#F8F5ED]' 
           : 'bg-gradient-to-r from-[#F1E9DA]/80 via-[#FAF7F0] to-[#F1E9DA]/80 border-y border-[#D4AF37]/35 text-[#292722]'
@@ -126,9 +126,9 @@ interface MarqueePillProps {
 
 const MarqueePill: React.FC<MarqueePillProps> = ({ item, isDark }) => {
   return (
-    <div className="inline-flex items-center gap-3 sm:gap-4 px-5 sm:px-8 shrink-0 group">
+    <div className="inline-flex items-center gap-3 sm:gap-4 px-6 sm:px-9 py-1 shrink-0 group">
       {/* Icon with Soft Ambient Gold Circle */}
-      <span className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 ${
+      <span className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 ${
         isDark 
           ? 'bg-[#2e2a22] border border-[#D4AF37]/40 shadow-sm shadow-[#D4AF37]/15' 
           : 'bg-[#FFFFFF] border border-[#D4AF37]/35 shadow-sm shadow-[#D4AF37]/10'

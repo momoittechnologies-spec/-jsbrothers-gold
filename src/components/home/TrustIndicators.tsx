@@ -4,7 +4,7 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
 
 export const TrustIndicators: React.FC = () => {
   return (
-    <section className="relative z-20 -mt-6 sm:-mt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative z-20 py-8 sm:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="bg-[#FFFFFF] rounded-2xl shadow-xl shadow-[#92702F]/8 border border-[#D4AF37]/35 p-5 sm:p-6 lg:p-7">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 items-center">
           
