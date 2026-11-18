@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { Home, Layers, Calculator, MessageSquare, IndianRupee } from 'lucide-react';
+import { Home, Layers, Phone, MessageSquare, IndianRupee } from 'lucide-react';
 import { getWhatsAppUrl } from '../../utils/whatsapp';
+import { getTelUrl } from '../../utils/phone';
 
 interface BottomActionBarProps {
   onOpenEnquiry: () => void;
@@ -85,45 +86,29 @@ export const BottomActionBar: React.FC<BottomActionBarProps> = ({ onOpenEnquiry 
           </span>
         </div>
 
-        {/* Tab 4: Calculator */}
-        <NavLink
-          to="/valuation-calculator"
-          className={({ isActive }) =>
-            `flex flex-col items-center justify-center h-full py-0.5 text-center transition-all duration-150 active:scale-90 ${
-              isActive
-                ? 'text-[#D4AF37]'
-                : 'text-[#A8A29E] hover:text-[#E9D5A5]'
-            }`
-          }
+        {/* Tab 4: Direct Phone Call (Replaced Calculator) */}
+        <a
+          href={getTelUrl()}
+          className="flex flex-col items-center justify-center h-full py-0.5 text-center text-[#A8A29E] hover:text-[#E9D5A5] active:scale-90 transition-all duration-150"
+          aria-label="Call JS BROTHER'S GOLD Kadapa"
         >
-          {({ isActive }) => (
-            <>
-              <Calculator className="w-5 h-5 mb-0.5 transition-transform" />
-              <span className="text-[10px] font-bold tracking-tight uppercase leading-none">
-                Calculator
-              </span>
-              {isActive ? (
-                <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] shadow-sm shadow-[#D4AF37] mt-1 animate-pulse" />
-              ) : (
-                <span className="w-1.5 h-1.5 rounded-full bg-transparent mt-1" />
-              )}
-            </>
-          )}
-        </NavLink>
+          <Phone className="w-5 h-5 mb-0.5 transition-transform" />
+          <span className="text-[10px] font-bold tracking-tight uppercase leading-none">
+            Call
+          </span>
+          <span className="w-1.5 h-1.5 rounded-full bg-transparent mt-1" />
+        </a>
 
-        {/* Tab 5: WhatsApp Direct Support */}
+        {/* Tab 5: WhatsApp Direct Support - Unified Bottom Nav Aesthetics */}
         <a
           href={getWhatsAppUrl("Hi JS BROTHER'S GOLD, I would like to get my gold valued in Kadapa.")}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center justify-center h-full py-0.5 text-center text-[#A8A29E] hover:text-emerald-400 active:scale-90 transition-all duration-150 relative"
+          className="flex flex-col items-center justify-center h-full py-0.5 text-center text-[#A8A29E] hover:text-[#E9D5A5] active:scale-90 transition-all duration-150"
+          aria-label="Chat with JS BROTHER'S GOLD on WhatsApp"
         >
-          <div className="relative">
-            <MessageSquare className="w-5 h-5 mb-0.5 text-emerald-400" />
-            <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-emerald-400 ring-2 ring-[#1e1c17] animate-ping" />
-            <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-emerald-400 ring-2 ring-[#1e1c17]" />
-          </div>
-          <span className="text-[10px] font-bold tracking-tight uppercase leading-none text-emerald-300">
+          <MessageSquare className="w-5 h-5 mb-0.5 transition-transform" />
+          <span className="text-[10px] font-bold tracking-tight uppercase leading-none">
             WhatsApp
           </span>
           <span className="w-1.5 h-1.5 rounded-full bg-transparent mt-1" />
