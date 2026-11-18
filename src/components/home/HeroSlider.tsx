@@ -37,7 +37,7 @@ const SLIDES: SlideData[] = [
     secondaryCtaText: "CALL OUR TEAM",
     image: heroValuationDesktop,
     mobileImage: heroValuationMobile,
-    imageAlt: "Professional Indian gold estimator in Kadapa evaluating 22K gold jewellery on digital Karatmeter and precision scale with customer"
+    imageAlt: "Professional 28-year-old gold estimator evaluating 22K gold jewellery with an elegant middle-aged woman customer on digital Karatmeter and precision scale in Kadapa"
   },
   {
     id: 2,
