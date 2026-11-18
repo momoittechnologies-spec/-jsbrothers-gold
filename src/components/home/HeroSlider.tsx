@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Phone, ArrowRight, ShieldCheck } from 'lucide-react';
 import { getTelUrl } from '../../utils/phone';
+import heroValuationDesktop from '../../assets/hero/hero-valuation-desktop.webp';
+import heroValuationMobile from '../../assets/hero/hero-valuation-mobile.webp';
 
 interface HeroSliderProps {
   onOpenEnquiry: (service?: string) => void;
@@ -18,6 +20,7 @@ interface SlideData {
   primaryService: string;
   secondaryCtaText: string;
   image: string;
+  mobileImage?: string;
   imageAlt: string;
 }
 
@@ -32,8 +35,9 @@ const SLIDES: SlideData[] = [
     primaryCtaText: "SELL YOUR GOLD",
     primaryService: "Old Gold Buying",
     secondaryCtaText: "CALL OUR TEAM",
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1920&q=85",
-    imageAlt: "Exquisite gold jewellery placed on an ivory marble surface with warm studio lighting and natural metallic reflections"
+    image: heroValuationDesktop,
+    mobileImage: heroValuationMobile,
+    imageAlt: "Professional Indian gold estimator in Kadapa evaluating 22K gold jewellery on digital Karatmeter and precision scale with customer"
   },
   {
     id: 2,
@@ -130,12 +134,17 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onOpenEnquiry }) => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="absolute inset-0 w-full h-full"
         >
-          <img
-            src={currentSlide.image}
-            alt={currentSlide.imageAlt}
-            className="w-full h-full object-cover object-center filter brightness-[0.88] contrast-[1.02]"
-            loading="eager"
-          />
+          <picture className="w-full h-full block">
+            {currentSlide.mobileImage && (
+              <source media="(max-width: 768px)" srcSet={currentSlide.mobileImage} />
+            )}
+            <img
+              src={currentSlide.image}
+              alt={currentSlide.imageAlt}
+              className="w-full h-full object-cover object-center filter brightness-[0.92] contrast-[1.02]"
+              loading="eager"
+            />
+          </picture>
 
           {/* Lighter, Warm Ivory & Champagne Gradient Vignettes */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#F8F5ED]/95 via-[#F8F5ED]/80 to-transparent lg:w-3/4" />
