@@ -89,6 +89,7 @@ export const BottomActionBar: React.FC<BottomActionBarProps> = ({ onOpenEnquiry 
         {/* Tab 4: Direct Phone Call (Replaced Calculator) */}
         <a
           href={getTelUrl()}
+          rel="nofollow"
           className="flex flex-col items-center justify-center h-full py-0.5 text-center text-[#A8A29E] hover:text-[#E9D5A5] active:scale-90 transition-all duration-150"
           aria-label="Call JS BROTHER'S GOLD Kadapa"
         >
@@ -103,7 +104,7 @@ export const BottomActionBar: React.FC<BottomActionBarProps> = ({ onOpenEnquiry 
         <a
           href={getWhatsAppUrl("Hi JS BROTHER'S GOLD, I would like to get my gold valued in Kadapa.")}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           className="flex flex-col items-center justify-center h-full py-0.5 text-center text-[#A8A29E] hover:text-[#E9D5A5] active:scale-90 transition-all duration-150"
           aria-label="Chat with JS BROTHER'S GOLD on WhatsApp"
         >

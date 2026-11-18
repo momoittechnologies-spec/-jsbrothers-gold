@@ -210,7 +210,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onOpenEnquiry }) => {
                 {currentSlide.headline.split('.').map((part, index, arr) => (
                   <span key={index} className="inline-block mr-1.5 last:mr-0">
                     {index === 1 ? (
-                      <span className="bg-gradient-to-r from-[#B8860B] via-[#92702F] to-[#7B5818] bg-clip-text text-transparent">
+                      <span className="bg-gradient-to-r from-[#D4AF37] via-[#B89548] to-[#92702F] bg-clip-text text-transparent">
                         {part.trim()}
                         {index < arr.length - 1 ? '.' : ''}
                       </span>

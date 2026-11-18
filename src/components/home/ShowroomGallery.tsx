@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Maximize2, X, ChevronLeft, ChevronRight, MapPin, Building2, ShieldCheck } from 'lucide-react';
 import { GALLERY_ITEMS, GALLERY_CATEGORIES, GalleryCategory, GalleryItem } from '../../data/galleryData';
@@ -7,6 +7,8 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
 export const ShowroomGallery: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<GalleryCategory>('all');
   const [selectedItemIndex, setSelectedItemIndex] = useState<number | null>(null);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   // Filter items based on selected category
   const filteredItems = activeCategory === 'all'
@@ -27,6 +29,24 @@ export const ShowroomGallery: React.FC = () => {
       setSelectedItemIndex((prev) => (prev! < filteredItems.length - 1 ? prev! + 1 : 0));
     }
   }, [selectedItemIndex, filteredItems.length]);
+
+  // Touch swipe support for mobile lightbox
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current - touchEndX.current > 45) {
+      handleNext();
+    }
+    if (touchStartX.current - touchEndX.current < -45) {
+      handlePrev();
+    }
+  };
 
   // Keyboard navigation for lightbox
   useEffect(() => {
@@ -232,12 +252,17 @@ export const ShowroomGallery: React.FC = () => {
                 </button>
               </div>
 
-              {/* Main Full-Size Image Container */}
-              <div className="relative flex-1 bg-black/60 flex items-center justify-center overflow-hidden min-h-[300px] sm:min-h-[480px]">
+              {/* Main Full-Size Image Container with Mobile Touch Swipe */}
+              <div 
+                className="relative flex-1 bg-black/60 flex items-center justify-center overflow-hidden min-h-[300px] sm:min-h-[480px] touch-pan-y"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+              >
                 <img
                   src={selectedItem.fullImage}
                   alt={selectedItem.title}
-                  className="max-h-[65vh] w-auto max-w-full object-contain select-none"
+                  className="max-h-[65vh] w-auto max-w-full object-contain select-none transition-transform"
                 />
 
                 {/* Left Navigation Arrow */}
