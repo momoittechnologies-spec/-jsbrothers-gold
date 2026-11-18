@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { HeroSlider } from '../components/home/HeroSlider';
+import { LuxuryMarquee } from '../components/home/LuxuryMarquee';
 import { TrustIndicators } from '../components/home/TrustIndicators';
 import { AboutSection } from '../components/home/AboutSection';
 import { ServicesSection } from '../components/home/ServicesSection';
@@ -23,6 +24,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
       {/* Phase 5: Cinematic Hero Slider */}
       <HeroSlider onOpenEnquiry={onOpenEnquiry} />
 
+      {/* Luminous Champagne Gold Infinite Marquee */}
+      <LuxuryMarquee variant="champagne" speed="normal" />
+
       {/* Phase 6 Section 01: Trust Indicators */}
       <TrustIndicators />
 
@@ -40,6 +44,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
 
       {/* Phase 6 Section 06: Google Customer Reviews */}
       <GoogleReviews />
+
+      {/* Dark Velvet Gold Infinite Marquee Transition */}
+      <LuxuryMarquee variant="dark" speed="slow" />
 
       {/* Phase 6 Section 07: Premium Contact CTA */}
       <ContactCTA />
