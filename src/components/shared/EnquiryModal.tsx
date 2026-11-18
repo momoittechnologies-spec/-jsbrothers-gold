@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Send, Phone, MessageSquare, CheckCircle2, Shield, Sparkles } from 'lucide-react';
+import { X, Send, Phone, MessageSquare, CheckCircle2, Shield } from 'lucide-react';
 import { BUSINESS_INFO } from '../../data/businessInfo';
 import { getWhatsAppUrl } from '../../utils/whatsapp';
 
@@ -196,8 +196,8 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
           <div className="p-6 sm:p-8 max-h-[85vh] overflow-y-auto">
             {/* Header */}
             <div className="mb-6">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E9D5A5]/30 border border-[#D4AF37]/30 text-[#92702F] text-[11px] font-semibold uppercase tracking-wider mb-2">
-                <Sparkles className="w-3 h-3 text-[#D4AF37]" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E9D5A5]/30 border border-[#D4AF37]/30 text-[#92702F] text-[11px] font-semibold uppercase tracking-wider mb-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" aria-hidden="true" />
                 Confidential • Zero Obligation
               </div>
               <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#292722]">

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { PageHeader } from '../components/shared/PageHeader';
 import { SERVICES_DATA } from '../data/servicesData';
-import { CheckCircle2, ArrowRight, Sparkles, MessageSquare, Phone } from 'lucide-react';
+import { CheckCircle2, ArrowRight, MessageSquare, Phone } from 'lucide-react';
 import { getWhatsAppUrl, getServiceWhatsAppUrl } from '../utils/whatsapp';
 import { getTelUrl } from '../utils/phone';
 import { BUSINESS_INFO } from '../data/businessInfo';
@@ -59,8 +59,8 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenEnquiry }) => 
 
               {/* Text Content Column (7 cols) */}
               <div className={`lg:col-span-7 space-y-5 ${isEven ? 'lg:order-1' : ''}`}>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E9D5A5]/30 border border-[#D4AF37]/35 text-[#92702F] text-xs font-semibold uppercase tracking-wider">
-                  <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E9D5A5]/30 border border-[#D4AF37]/35 text-[#92702F] text-xs font-semibold uppercase tracking-[0.16em]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" aria-hidden="true" />
                   {service.subtitle}
                 </div>
 

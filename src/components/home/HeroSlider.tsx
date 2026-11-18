@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Phone, Sparkles, ArrowRight, ShieldCheck } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Phone, ArrowRight, ShieldCheck } from 'lucide-react';
 import { getTelUrl } from '../../utils/phone';
 
 interface HeroSliderProps {
@@ -155,8 +155,8 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onOpenEnquiry }) => {
             >
               {/* Gold Luxury Tag */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFFFF]/90 backdrop-blur-md border border-[#D4AF37]/40 shadow-sm">
-                <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-                <span className="text-xs uppercase tracking-[0.15em] font-bold text-[#92702F]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" aria-hidden="true" />
+                <span className="text-xs uppercase tracking-[0.16em] font-bold text-[#92702F]">
                   {currentSlide.tag}
                 </span>
               </div>

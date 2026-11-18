@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MessageSquare, MapPin, Sparkles } from 'lucide-react';
+import { Phone, MessageSquare, MapPin, Coins } from 'lucide-react';
 import { BUSINESS_INFO } from '../../data/businessInfo';
 import { getTelUrl } from '../../utils/phone';
 import { getWhatsAppUrl } from '../../utils/whatsapp';
@@ -55,7 +55,7 @@ export const BottomActionBar: React.FC<BottomActionBarProps> = ({ onOpenEnquiry 
           className="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-gradient-to-br from-[#F6E7B8] via-[#D4AF37] to-[#B89548] text-[#28251F] active:scale-95 transition-all shadow-md shadow-[#D4AF37]/30"
         >
           <div className="w-8 h-8 rounded-full bg-black/10 flex items-center justify-center text-[#28251F] mb-0.5">
-            <Sparkles className="w-4 h-4" />
+            <Coins className="w-4 h-4" />
           </div>
           <span className="text-[10px] font-extrabold uppercase tracking-wider leading-tight">SELL GOLD</span>
         </button>

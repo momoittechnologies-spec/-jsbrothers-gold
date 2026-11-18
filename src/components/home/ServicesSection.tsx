@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, CheckCircle, Scale, Shield, Landmark, Award, Banknote } from 'lucide-react';
+import { ArrowRight, Coins, CheckCircle, Scale, Shield, Landmark, Award, Banknote } from 'lucide-react';
 import { SERVICES_DATA } from '../../data/servicesData';
 
 interface ServicesSectionProps {
@@ -9,7 +9,7 @@ interface ServicesSectionProps {
 
 export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenEnquiry }) => {
   const serviceIcons: Record<string, React.ReactNode> = {
-    'old-gold-buying': <Sparkles className="w-5 h-5" />,
+    'old-gold-buying': <Coins className="w-5 h-5" />,
     'broken-gold-buying': <Scale className="w-5 h-5" />,
     'professional-gold-valuation': <Shield className="w-5 h-5" />,
     'pledged-gold-release': <Landmark className="w-5 h-5" />,
@@ -23,8 +23,8 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenEnquiry 
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14 lg:mb-18 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#E9D5A5]/30 border border-[#D4AF37]/35 text-[#92702F] text-xs font-semibold uppercase tracking-widest">
-            <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E9D5A5]/30 border border-[#D4AF37]/35 text-[#92702F] text-xs font-semibold uppercase tracking-[0.16em]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" aria-hidden="true" />
             What We Do
           </div>
           

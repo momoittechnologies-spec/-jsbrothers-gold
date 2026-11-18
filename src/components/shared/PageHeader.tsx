@@ -1,5 +1,4 @@
 import React from 'react';
-import { Sparkles } from 'lucide-react';
 
 interface PageHeaderProps {
   badge: string;
@@ -29,7 +28,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1e1c17]/80 backdrop-blur-md border border-[#D4AF37]/40 shadow-lg">
-          <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" aria-hidden="true" />
           <span className="text-xs uppercase tracking-[0.18em] font-semibold text-[#E9D5A5]">
             {badge}
           </span>

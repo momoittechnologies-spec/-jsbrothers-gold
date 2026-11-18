@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ShieldCheck, Check, Sparkles } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Check } from 'lucide-react';
 import { BUSINESS_INFO } from '../../data/businessInfo';
 
 interface AboutSectionProps {
@@ -19,8 +19,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenEnquiry }) => 
           
           {/* Left Column: Editorial & Philosophy (6 cols) */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E9D5A5]/35 border border-[#D4AF37]/35 text-[#92702F] text-xs font-semibold uppercase tracking-widest">
-              <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E9D5A5]/35 border border-[#D4AF37]/35 text-[#92702F] text-xs font-semibold uppercase tracking-[0.16em]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" aria-hidden="true" />
               About JS BROTHER'S GOLD
             </div>
 

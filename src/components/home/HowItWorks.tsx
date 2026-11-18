@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, PhoneCall, MessageSquare, Scale, CheckCircle2 } from 'lucide-react';
+import { PhoneCall, MessageSquare, Scale, CheckCircle2 } from 'lucide-react';
 import { HOW_IT_WORKS_STEPS } from '../../data/servicesData';
 
 interface HowItWorksProps {
@@ -20,8 +20,8 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenEnquiry }) => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 lg:mb-20 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#E9D5A5]/30 border border-[#D4AF37]/35 text-[#92702F] text-xs font-semibold uppercase tracking-widest">
-            <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E9D5A5]/30 border border-[#D4AF37]/35 text-[#92702F] text-xs font-semibold uppercase tracking-[0.16em]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" aria-hidden="true" />
             Process Timeline
           </div>
 

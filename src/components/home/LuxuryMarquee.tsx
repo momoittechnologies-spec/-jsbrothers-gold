@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, ShieldCheck, Scale, Award, Star, Zap, MapPin, CheckCircle2 } from 'lucide-react';
+import { Coins, ShieldCheck, Scale, Award, Star, Zap, MapPin, CheckCircle2 } from 'lucide-react';
 
 interface MarqueeItem {
   prefix?: string;
@@ -55,7 +55,7 @@ export const LuxuryMarquee: React.FC<LuxuryMarqueeProps> = ({
       title: "Old, Unused & Broken Gold",
       highlight: "Highest Value",
       tag: "Live Gold Valuation",
-      icon: <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+      icon: <Coins className="w-3.5 h-3.5 text-[#D4AF37]" />
     },
     {
       title: "Prime Kadapa Destination",
@@ -166,9 +166,9 @@ const MarqueePill: React.FC<MarqueePillProps> = ({ item, isDark }) => {
         )}
       </div>
 
-      {/* Royal 4-Point Star Separator */}
-      <span className="text-[#D4AF37] opacity-60 text-xs sm:text-sm pl-4 sm:pl-6 select-none font-serif" aria-hidden="true">
-        ✦
+      {/* Luxury Diamond Separator */}
+      <span className="text-[#D4AF37] opacity-60 text-[10px] sm:text-xs pl-4 sm:pl-6 select-none" aria-hidden="true">
+        ◆
       </span>
     </div>
   );

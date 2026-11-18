@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MessageSquare, Sparkles } from 'lucide-react';
+import { Phone, MessageSquare } from 'lucide-react';
 import { BUSINESS_INFO } from '../../data/businessInfo';
 import { getTelUrl } from '../../utils/phone';
 import { getWhatsAppUrl } from '../../utils/whatsapp';
@@ -11,8 +11,8 @@ export const ContactCTA: React.FC = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-64 bg-[#E9D5A5]/30 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-        <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#E9D5A5]/40 border border-[#D4AF37]/40 text-[#92702F] text-xs font-bold uppercase tracking-widest shadow-sm">
-          <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E9D5A5]/40 border border-[#D4AF37]/40 text-[#92702F] text-xs font-bold uppercase tracking-[0.16em] shadow-sm">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" aria-hidden="true" />
           Instant Evaluation Desk
         </div>
 

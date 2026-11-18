@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PageHeader } from '../components/shared/PageHeader';
-import { Calculator, ShieldCheck, Info, MessageSquare, PhoneCall, Sparkles, ArrowRight } from 'lucide-react';
+import { Calculator, ShieldCheck, Info, MessageSquare, PhoneCall, ArrowRight } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/businessInfo';
 import { getServiceWhatsAppUrl } from '../utils/whatsapp';
 import { getTelUrl } from '../utils/phone';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Eye, UserCheck, MessageCircle, Building2, Sparkles } from 'lucide-react';
+import { Eye, UserCheck, MessageCircle, Building2 } from 'lucide-react';
 import { TRUST_FEATURES } from '../../data/servicesData';
 
 export const WhyChooseUs: React.FC = () => {
@@ -16,8 +16,8 @@ export const WhyChooseUs: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#E9D5A5]/30 border border-[#D4AF37]/35 text-[#92702F] text-xs font-semibold uppercase tracking-widest">
-            <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E9D5A5]/30 border border-[#D4AF37]/35 text-[#92702F] text-xs font-semibold uppercase tracking-[0.16em]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" aria-hidden="true" />
             Trust Pillars
           </div>
 

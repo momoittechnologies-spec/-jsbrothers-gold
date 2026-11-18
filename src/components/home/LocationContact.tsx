@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Clock, ExternalLink, Navigation, Sparkles } from 'lucide-react';
+import { MapPin, Phone, Clock, ExternalLink, Navigation } from 'lucide-react';
 import { InstagramIcon } from '../shared/Icons';
 import { BUSINESS_INFO } from '../../data/businessInfo';
 import { getTelUrl } from '../../utils/phone';
@@ -12,8 +12,8 @@ export const LocationContact: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#E9D5A5]/30 border border-[#D4AF37]/35 text-[#92702F] text-xs font-semibold uppercase tracking-widest">
-            <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E9D5A5]/30 border border-[#D4AF37]/35 text-[#92702F] text-xs font-semibold uppercase tracking-[0.16em]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" aria-hidden="true" />
             Flagship Establishment
           </div>
 

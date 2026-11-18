@@ -6,7 +6,7 @@ import {
   Phone, 
   MessageSquare, 
   ChevronRight, 
-  Sparkles,
+  ArrowRight,
   Home,
   Info,
   Layers,
@@ -136,10 +136,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
           <div className="hidden lg:flex items-center flex-shrink-0">
             <button
               onClick={() => onOpenEnquiry('Old Gold Buying')}
-              className="btn-gold-glossy text-xs uppercase tracking-wider font-bold py-2.5 px-4 xl:px-6 shadow-sm hover:shadow-md transition-all whitespace-nowrap flex-shrink-0 inline-flex items-center justify-center"
+              className="btn-gold-glossy text-xs uppercase tracking-wider font-bold py-2.5 px-4 xl:px-6 shadow-sm hover:shadow-md transition-all whitespace-nowrap flex-shrink-0 inline-flex items-center justify-center gap-1.5"
             >
-              <Sparkles className="w-3.5 h-3.5 mr-1.5 text-[#92702F] flex-shrink-0" />
               <span>SELL YOUR GOLD</span>
+              <ArrowRight className="w-3.5 h-3.5 text-[#92702F] flex-shrink-0" />
             </button>
           </div>
 
@@ -217,8 +217,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                   }}
                   className="w-full btn-gold-glossy py-3.5 text-xs uppercase tracking-wider font-bold shadow-md flex items-center justify-center gap-2"
                 >
-                  <Sparkles className="w-4 h-4 text-[#92702F]" />
                   <span>SELL YOUR GOLD</span>
+                  <ArrowRight className="w-4 h-4 text-[#92702F]" />
                 </button>
               </div>
             </div>
