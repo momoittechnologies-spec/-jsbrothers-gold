@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jsbrothersgold.com/sitemap.xml
+Sitemap: https://jsbrothersgold.in/sitemap.xml

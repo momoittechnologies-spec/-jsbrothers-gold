@@ -1,7 +1,8 @@
 # JS BROTHER'S GOLD – Premium Glossy Luxury Website
 
 > **Kadapa's Premier Gold-Buying and Valuation Destination**  
-> *Where Gold Meets Trust.*
+> *Where Gold Meets Trust.*  
+> **Target Domain:** [https://jsbrothersgold.in](https://jsbrothersgold.in)
 
 [![Deployment: Vercel](https://img.shields.io/badge/Deployment-Vercel-black?logo=vercel)](https://vercel.com)
 [![Framework: React 19](https://img.shields.io/badge/Framework-React%2019-61dafb?logo=react)](https://react.dev)
@@ -48,9 +49,9 @@ The digital application is styled in **Glossy Ivory & Champagne Gold Luxury**, e
    - Slide 04: Business Trust ("A Better Gold-Buying Experience.")
 
 2. **Core Services Directory (Phase 6):**
-   - **Old Gold Buying:** Purchase of old, heirloom, and unused gold ornaments with non-destructive German Karatmeter purity evaluation.
+   - **Old Gold Buying:** Purchase of old, heirloom, and unused gold ornaments with transparent visual assessment and digital precision scale weighing.
    - **Broken Gold Buying:** Fair valuation of broken, snapped, single, or scrap gold jewellery based strictly on elemental gold content.
-   - **Professional Gold Valuation:** Non-invasive X-ray Fluorescence (XRF) spectrometry reports with zero scratches or chemical damage.
+   - **Professional Gold Valuation:** Non-destructive purity testing and transparent weight evaluation conducted directly in customer view.
    - **Pledged Gold Release Assistance:** Financial settlement and guidance to release gold pledged with banks, NBFCs, and pawnbrokers.
 
 3. **Interactive Gold Weight & Karat Calculator (Phase 9):**
