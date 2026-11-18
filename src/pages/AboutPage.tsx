@@ -19,7 +19,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenEnquiry }) => {
         badge="Our Heritage & Ethos"
         title="Where Gold Meets Trust"
         subtitle="Kadapa's foremost destination for transparent gold evaluation, precision scale weighing, and dignified service."
-        backgroundImage="https://images.unsplash.com/photo-1620656798579-1984d9e87dfa?auto=format&fit=crop&w=1920&q=85"
+        backgroundImage="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1920&q=85"
       />
 
       {/* Philosophy Section */}

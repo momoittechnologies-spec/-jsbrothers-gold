@@ -41,7 +41,7 @@ export const GoldLogo: React.FC<GoldLogoProps> = ({
     <Link 
       to="/" 
       onClick={onClick}
-      className={`inline-flex items-center gap-2.5 sm:gap-3 group transition-transform duration-200 ${className}`}
+      className={`inline-flex items-center gap-2.5 sm:gap-3 flex-shrink-0 group transition-transform duration-200 ${className}`}
     >
       {/* Official Company Metallic Gold Medallion Logo */}
       <div className={`relative ${iconSizes[size]} flex-shrink-0 flex items-center justify-center transition-transform duration-300 group-hover:scale-105`}>

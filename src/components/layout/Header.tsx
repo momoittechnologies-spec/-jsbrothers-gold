@@ -55,13 +55,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
   }, [location.pathname]);
 
   const navLinks = [
-    { label: 'Home', path: '/', icon: <Home className="w-4 h-4 text-[#D4AF37]" /> },
-    { label: 'About Us', path: '/about', icon: <Info className="w-4 h-4 text-[#D4AF37]" /> },
-    { label: 'Our Services', path: '/services', icon: <Layers className="w-4 h-4 text-[#D4AF37]" /> },
-    { label: 'How It Works', path: '/how-it-works', icon: <GitBranch className="w-4 h-4 text-[#D4AF37]" /> },
-    { label: 'Google Reviews', path: '/reviews', icon: <Star className="w-4 h-4 text-[#D4AF37]" /> },
-    { label: 'Valuation Calculator', path: '/valuation-calculator', icon: <Calculator className="w-4 h-4 text-[#D4AF37]" /> },
-    { label: 'Contact Us', path: '/contact', icon: <MapPin className="w-4 h-4 text-[#D4AF37]" /> },
+    { label: 'Home', desktopLabel: 'Home', path: '/', icon: <Home className="w-4 h-4 text-[#D4AF37]" /> },
+    { label: 'About Us', desktopLabel: 'About Us', path: '/about', icon: <Info className="w-4 h-4 text-[#D4AF37]" /> },
+    { label: 'Our Services', desktopLabel: 'Services', path: '/services', icon: <Layers className="w-4 h-4 text-[#D4AF37]" /> },
+    { label: 'How It Works', desktopLabel: 'How It Works', path: '/how-it-works', icon: <GitBranch className="w-4 h-4 text-[#D4AF37]" /> },
+    { label: 'Google Reviews', desktopLabel: 'Reviews', path: '/reviews', icon: <Star className="w-4 h-4 text-[#D4AF37]" /> },
+    { label: 'Valuation Calculator', desktopLabel: 'Calculator', path: '/valuation-calculator', icon: <Calculator className="w-4 h-4 text-[#D4AF37]" /> },
+    { label: 'Contact Us', desktopLabel: 'Contact', path: '/contact', icon: <MapPin className="w-4 h-4 text-[#D4AF37]" /> },
   ];
 
   return (
@@ -109,49 +109,37 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
             : 'bg-[#F8F5ED] border-b border-[#D4AF37]/20 py-3 sm:py-4'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
           {/* Logo / Wordmark */}
           <GoldLogo size="md" />
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-7">
-            {navLinks.slice(0, 6).map((link) => (
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-7">
+            {navLinks.map((link) => (
               <NavLink
                 key={link.path}
                 to={link.path}
                 className={({ isActive }) =>
-                  `relative text-xs uppercase tracking-[0.1em] font-semibold transition-colors duration-200 py-1 ${
+                  `relative text-[11px] xl:text-xs uppercase tracking-[0.08em] xl:tracking-[0.1em] font-semibold transition-colors duration-200 py-1 whitespace-nowrap flex-shrink-0 ${
                     isActive
                       ? 'text-[#92702F] font-bold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-[#D4AF37]'
                       : 'text-[#292722] hover:text-[#92702F]'
                   }`
                 }
               >
-                {link.label}
+                {link.desktopLabel}
               </NavLink>
             ))}
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                `relative text-xs uppercase tracking-[0.1em] font-semibold transition-colors duration-200 py-1 ${
-                  isActive
-                    ? 'text-[#92702F] font-bold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-[#D4AF37]'
-                    : 'text-[#292722] hover:text-[#92702F]'
-                }`
-              }
-            >
-              Contact
-            </NavLink>
           </nav>
 
           {/* Desktop Right CTA Button */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center flex-shrink-0">
             <button
               onClick={() => onOpenEnquiry('Old Gold Buying')}
-              className="btn-gold-glossy text-xs uppercase tracking-wider font-bold py-2.5 px-6 shadow-sm hover:shadow-md transition-all"
+              className="btn-gold-glossy text-xs uppercase tracking-wider font-bold py-2.5 px-4 xl:px-6 shadow-sm hover:shadow-md transition-all whitespace-nowrap flex-shrink-0 inline-flex items-center justify-center"
             >
-              <Sparkles className="w-3.5 h-3.5 mr-1.5 text-[#92702F]" />
-              SELL YOUR GOLD
+              <Sparkles className="w-3.5 h-3.5 mr-1.5 text-[#92702F] flex-shrink-0" />
+              <span>SELL YOUR GOLD</span>
             </button>
           </div>
 

@@ -82,7 +82,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenEnquiry }) => 
 
             <div className="relative rounded-2xl overflow-hidden border border-[#D4AF37]/40 shadow-xl group">
               <img
-                src="https://images.unsplash.com/photo-1620656798579-1984d9e87dfa?auto=format&fit=crop&w=1400&q=85"
+                src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1400&q=85"
                 alt="Gold jewellery appraisal and evaluation in Kadapa"
                 className="w-full h-[400px] sm:h-[480px] object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                 loading="lazy"
