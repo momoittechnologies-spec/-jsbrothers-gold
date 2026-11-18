@@ -11,6 +11,7 @@ interface SlideData {
   id: number;
   tag: string;
   headline: string;
+  teluguSubheading: string;
   description: string;
   primaryCtaText: string;
   primaryService: string;
@@ -24,6 +25,7 @@ const SLIDES: SlideData[] = [
     id: 1,
     tag: "Gold-Buying Services • Kadapa",
     headline: "Your Gold. Your Value. Your Choice.",
+    teluguSubheading: "మీ పాత మరియు వాడని బంగారానికి సరైన విలువ • తక్షణ నగదు చెల్లింపు",
     description: "Discover a professional and transparent way to sell your old, unused and broken gold with JS BROTHER'S GOLD in Kadapa.",
     primaryCtaText: "SELL YOUR GOLD",
     primaryService: "Old Gold Buying",
@@ -35,6 +37,7 @@ const SLIDES: SlideData[] = [
     id: 2,
     tag: "Professional Gold Valuation",
     headline: "Every Gram Deserves Attention.",
+    teluguSubheading: "మీ సమక్షంలోనే పారదర్శక డిజిటల్ తూకం • ఖచ్చితమైన స్వచ్ఛత పరిశీలన",
     description: "Understand the true purity and value of your gold through our transparent in-person evaluation process.",
     primaryCtaText: "ENQUIRE NOW",
     primaryService: "Gold Valuation",
@@ -46,6 +49,7 @@ const SLIDES: SlideData[] = [
     id: 3,
     tag: "Pledged Gold Assistance",
     headline: "Your Gold Matters. We're Here to Help.",
+    teluguSubheading: "బ్యాంకులు & ఫైనాన్స్ వద్ద తనఖా పెట్టిన బంగారం విడిపించుటకు నమ్మకమైన సహాయం",
     description: "Speak with our Kadapa team for confidential guidance with releasing pledged gold from banks and private lenders.",
     primaryCtaText: "GET ASSISTANCE",
     primaryService: "Pledged Gold Assistance",
@@ -172,6 +176,14 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onOpenEnquiry }) => {
                   </span>
                 ))}
               </h1>
+
+              {/* Professional Telugu Sub-Heading */}
+              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-xl bg-[#FFFFFF]/90 backdrop-blur-sm border border-[#D4AF37]/35 shadow-sm max-w-full">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] flex-shrink-0 animate-pulse" />
+                <p className="text-xs sm:text-sm font-semibold text-[#292722] leading-snug tracking-wide">
+                  {currentSlide.teluguSubheading}
+                </p>
+              </div>
 
               {/* Description */}
               <p className="text-sm sm:text-base lg:text-lg text-[#777168] font-medium leading-relaxed max-w-xl">
